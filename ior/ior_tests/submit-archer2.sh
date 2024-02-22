@@ -25,7 +25,8 @@ export OMP_NUM_THREADS=1
 
 #module load darshan/3.4.4
 
-module use ../modulefiles
+module use ../../modulefiles/archer2
+
 
 module load ior
 module load xthi 

@@ -1,0 +1,35 @@
+#%Module
+#
+
+# Clashes
+conflict ior
+
+proc ModulesHelp { } {
+puts stderr "IOR "
+puts stderr "=============="
+puts stderr ""
+
+puts stderr "Installed: 17 February 2024  (l.parisi@epcc.ed.ac.uk)"
+}
+
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys        [uname sysname]
+
+
+module load intel-20.4/compilers
+module load intel-20.4/mpi
+
+
+
+
+set base_dir /work/z04/z04/lparisi/e1000_benchmarking/sw/ior
+setenv IOR_ROOT $base_dir
+
+prepend-path PATH $base_dir/bin
+prepend-path MANPATH $base_dir/share/man
+
+append-path LD_LIBRARY_PATH $base_dir/lib
+
+

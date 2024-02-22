@@ -42,18 +42,12 @@ def load(filename):
                         m=re.match(r"stripes\s*:\s*(\d+)",line)
                         if m is not None:
                             stripes=int(m[1])
-                        else:
-                            m=re.match(r"segments\s*:\s*(\d+)",line)
-                            if m is not None:
-                                segments=int(m[1])
                             
                     
                 
     data["nodes"]=node
     data["tasks"]=tasks
     data["stripes"]=stripes
-    data["segments"]=segments
-    
     return pd.DataFrame(data)
 
 
@@ -64,7 +58,7 @@ def load_reports(directoryname):
 
 
 def aggregate_OST(data):
-    return data.groupby(["nodes","tasks","op","stripes","segments"]).aggregate(func=[np.average,np.std]).reset_index(drop=False)
+    return data.groupby(["nodes","tasks","op","stripes"]).aggregate(func=[np.average,np.std]).reset_index(drop=False)
                     
 
 
@@ -79,7 +73,7 @@ def scatter_plot_ost(data):
     #ax.set_yticks(yticks)
 
 
-def scatter_plot_ost_aggregated(data_aggregated,by="nodes",x="tasks"):
-    for value,_data in data_aggregated.sort_values(x).groupby(by):
-        plt.errorbar( _data.loc[:,x] , _data.loc[:,('bandwidth', 'average')],_data.loc[:,('bandwidth', 'std')],label=f"{by}={value}",fmt="o--")
+def scatter_plot_ost_aggregated(data_aggregated):
+    for value,_data in data_aggregated.sort_values("nodes").groupby("nodes"):
+        plt.errorbar( _data.loc[:,"tasks"] , _data.loc[:,('bandwidth', 'average')],_data.loc[:,('bandwidth', 'std')],label=f"nodes={value}",fmt="o--")
     plt.legend()
