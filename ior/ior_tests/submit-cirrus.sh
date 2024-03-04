@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=ior
-#SBATCH --time=08:00:0
+#SBATCH --time=24:00:0
 #SBATCH --nodes=4
 #SBATCH --ntasks-per-node=36
 #SBATCH --cpus-per-task=1

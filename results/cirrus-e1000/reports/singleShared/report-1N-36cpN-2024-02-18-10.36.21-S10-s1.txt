@@ -1,0 +1,34 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Feb 18 10:36:23 2024
+Command line        : /work/z04/z04/lparisi/e1000_benchmarking/sw/ior/bin/ior -b 16m -t 2m -s 1 -e -i 10 -C -O testFile=benchmark
+Machine             : Linux r1i3n24
+TestID              : 0
+StartTime           : Sun Feb 18 10:36:23 2024
+Path                : benchmark
+FS                  : 14.6 TiB   Used FS: 1.6%   Inodes: 16382.0 Mi   Used Inodes: 3.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : benchmark
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 36
+clients per node    : 36
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 10
+xfersize            : 2 MiB
+blocksize           : 16 MiB
+aggregate filesize  : 576 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----

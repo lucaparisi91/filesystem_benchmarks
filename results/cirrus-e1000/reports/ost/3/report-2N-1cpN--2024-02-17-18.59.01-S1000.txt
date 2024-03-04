@@ -1,0 +1,61 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Feb 17 18:59:02 2024
+Command line        : /work/z04/z04/lparisi/e1000_benchmarking/sw/ior/bin/ior -b 16m -t 2m -s 1000 -F -e -i 10 -C -O testFile=benchmark
+Machine             : Linux r1i3n22
+TestID              : 0
+StartTime           : Sat Feb 17 18:59:02 2024
+Path                : benchmark.00000000
+FS                  : 14.6 TiB   Used FS: 0.2%   Inodes: 16382.0 Mi   Used Inodes: 3.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : benchmark
+access              : file-per-process
+type                : independent
+segments            : 1000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2
+tasks               : 2
+clients per node    : 1
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 10
+xfersize            : 2 MiB
+blocksize           : 16 MiB
+aggregate filesize  : 31.25 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     1871.18    935.68     2.14        16384      2048.00    0.001055   17.10      0.032982   17.10      0   
+read      2725.63    1362.93    1.47        16384      2048.00    0.000636   11.74      0.013401   11.74      0   
+write     1872.26    936.21     2.11        16384      2048.00    0.000997   17.09      0.183358   17.09      1   
+read      2669.44    1334.88    1.50        16384      2048.00    0.000554   11.99      0.057843   11.99      1   
+write     1867.68    933.92     2.12        16384      2048.00    0.001656   17.13      0.183267   17.13      2   
+read      2662.45    1331.34    1.50        16384      2048.00    0.000573   12.02      0.083024   12.02      2   
+write     1864.15    932.16     2.12        16384      2048.00    0.001261   17.16      0.169063   17.17      3   
+read      2781.14    1390.70    1.44        16384      2048.00    0.000590   11.51      0.063679   11.51      3   
+write     1866.39    933.26     2.12        16384      2048.00    0.000927   17.14      0.155441   17.15      4   
+read      2708.64    1354.43    1.48        16384      2048.00    0.000614   11.81      0.001201   11.81      4   
+write     1868.89    934.52     2.11        16384      2048.00    0.001073   17.12      0.237411   17.12      5   
+read      2613.82    1307.01    1.53        16384      2048.00    0.000603   12.24      0.123420   12.24      5   
+write     1880.98    940.58     2.13        16384      2048.00    0.001979   17.01      0.048203   17.01      6   
+read      2576.84    1288.57    1.55        16384      2048.00    0.000541   12.42      0.079909   12.42      6   
+write     1875.17    937.66     2.13        16384      2048.00    0.000883   17.06      0.069578   17.07      7   
+read      2769.38    1384.91    1.44        16384      2048.00    0.000599   11.55      0.015941   11.55      7   
+write     1860.80    930.49     2.14        16384      2048.00    0.001962   17.20      0.047449   17.20      8   
+read      2683.12    1341.70    1.49        16384      2048.00    0.000607   11.93      0.055735   11.93      8   
+write     1861.38    930.77     2.14        16384      2048.00    0.000972   17.19      0.097391   17.19      9   
+read      2700.16    1350.25    1.48        16384      2048.00    0.000532   11.85      0.017253   11.85      9   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        1880.98    1860.80    1868.89       5.95     940.49     930.40     934.44       2.98   17.12265         NA            NA     0      2   1   10   1     1        1         0    0   1000 16777216  2097152   32000.0 POSIX      0
+read         2781.14    2576.84    2689.06      60.13    1390.57    1288.42    1344.53      30.07   11.90606         NA            NA     0      2   1   10   1     1        1         0    0   1000 16777216  2097152   32000.0 POSIX      0
+Finished            : Sat Feb 17 19:04:19 2024
+stripes: 1

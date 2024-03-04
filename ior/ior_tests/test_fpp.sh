@@ -24,5 +24,6 @@ do
         srun --cpus-per-task=1 --nodes=${num_nodes} --ntasks-per-node=${cpus_per_node} --ntasks=$(( ${num_nodes}*${cpus_per_node})) --distribution=block:block --hint=nomultithread ior -b 16m -t 2m  -s $nsegments -e -i $NREPEAT -C -F  -O testFile=benchmark > ${REPORT_FILE_BASE}.txt
         echo "stripes: ${stripe}" >> ${REPORT_FILE_BASE}.txt
         rm -f benchmark*
+        sleep 5
     done
 done 

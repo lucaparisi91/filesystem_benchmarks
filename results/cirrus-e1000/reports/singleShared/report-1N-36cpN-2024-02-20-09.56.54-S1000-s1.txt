@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Feb 20 09:56:56 2024
+Command line        : /work/z04/z04/lparisi/e1000_benchmarking/sw/ior/bin/ior -b 16m -t 2m -s 1000 -e -i 10 -C -O testFile=benchmark
+Machine             : Linux r1i3n22
+TestID              : 0
+StartTime           : Tue Feb 20 09:56:56 2024
+Path                : benchmark
+FS                  : 14.6 TiB   Used FS: 1.6%   Inodes: 16382.0 Mi   Used Inodes: 3.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : benchmark
+access              : single-shared-file
+type                : independent
+segments            : 1000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 36
+clients per node    : 36
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 10
+xfersize            : 2 MiB
+blocksize           : 16 MiB
+aggregate filesize  : 562.50 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     1275.40    637.70     56.45       16384      2048.00    0.001821   451.62     0.010065   451.62     0   
+read      1805.70    902.85     16.08       16384      2048.00    0.011287   318.99     236.27     318.99     0   
+write     1318.80    659.40     54.59       16384      2048.00    0.001800   436.76     0.015317   436.76     1   
+read      1842.18    921.09     39.08       16384      2048.00    0.009662   312.67     230.73     312.67     1   
+write     1274.16    637.08     56.51       16384      2048.00    0.001422   452.06     0.009461   452.06     2   
+read      1798.46    899.23     38.60       16384      2048.00    0.014259   320.27     238.37     320.27     2   
+write     1230.96    615.48     58.49       16384      2048.00    0.001732   467.93     0.000940   467.93     3   
+read      1850.60    925.30     29.11       16384      2048.00    0.009321   311.25     211.09     311.25     3   

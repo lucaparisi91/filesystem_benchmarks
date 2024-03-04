@@ -1,0 +1,51 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Feb 18 10:36:07 2024
+Command line        : /work/z04/z04/lparisi/e1000_benchmarking/sw/ior/bin/ior -b 16m -t 2m -s 1 -e -i 10 -C -O testFile=benchmark
+Machine             : Linux r1i3n22
+TestID              : 0
+StartTime           : Sun Feb 18 10:36:07 2024
+Path                : benchmark
+FS                  : 14.6 TiB   Used FS: 1.6%   Inodes: 16382.0 Mi   Used Inodes: 3.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : benchmark
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 36
+clients per node    : 36
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 10
+xfersize            : 2 MiB
+blocksize           : 16 MiB
+aggregate filesize  : 576 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     1286.37    644.49     0.055858    16384      2048.00    0.001289   0.446867   0.000367   0.447772   0   
+read      42983      22011      0.000989    16384      2048.00    0.009410   0.013084   0.008651   0.013401   0   
+write     1373.82    688.28     0.052212    16384      2048.00    0.001188   0.418434   0.005143   0.419269   1   
+read      40580      20760      0.000437    16384      2048.00    0.010387   0.013873   0.009783   0.014194   1   
+write     1420.68    712.40     0.050443    16384      2048.00    0.001513   0.404266   0.000571   0.405439   2   
+read      36961      18817      0.000495    16384      2048.00    0.012181   0.015305   0.011631   0.015584   2   
+write     1326.26    666.29     0.054028    16384      2048.00    0.002705   0.432246   0.000360   0.434305   3   
+read      41329      21175      0.000986    16384      2048.00    0.010592   0.013601   0.009700   0.013937   3   
+write     1329.32    666.21     0.053838    16384      2048.00    0.002563   0.432298   0.000432   0.433305   4   
+read      41049      20929      0.000430    16384      2048.00    0.010571   0.013761   0.008761   0.014032   4   
+write     1347.48    675.09     0.053241    16384      2048.00    0.001521   0.426613   0.000360   0.427463   5   
+read      41116      20987      0.000473    16384      2048.00    0.010601   0.013723   0.009714   0.014009   5   
+write     1242.73    638.67     0.051229    16384      2048.00    0.001487   0.450940   0.052263   0.463494   6   
+ERROR: stat("benchmark", ...) failed, (aiori-POSIX.c:866)
+ERROR: stat("benchmark", ...) failed, (aiori-POSIX.c:866)
+ERROR: stat("benchmark", ...) failed, (aiori-POSIX.c:866)
+ERROR: stat("benchmark", ...) failed, (aiori-POSIX.c:866)

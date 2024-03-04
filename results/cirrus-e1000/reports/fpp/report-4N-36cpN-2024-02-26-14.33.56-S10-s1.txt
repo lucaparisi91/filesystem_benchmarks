@@ -1,0 +1,87 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Feb 26 14:34:22 2024
+Command line        : /work/z04/z04/lparisi/e1000_benchmarking/sw/ior/bin/ior -b 16m -t 2m -s 10 -e -i 5 -C -F -O testFile=benchmark
+Machine             : Linux r1i3n22
+TestID              : 0
+StartTime           : Mon Feb 26 14:34:22 2024
+WARNING: The file "benchmark.00000011" exists already and will be deleted
+WARNING: The file "benchmark.00000014" exists already and will be deleted
+WARNING: The file "benchmark.00000032" exists already and will be deleted
+WARNING: The file "benchmark.00000024" exists already and will be deleted
+WARNING: The file "benchmark.00000034" exists already and will be deleted
+WARNING: The file "benchmark.00000035" exists already and will be deleted
+WARNING: The file "benchmark.00000033" exists already and will be deleted
+WARNING: The file "benchmark.00000004" exists already and will be deleted
+WARNING: The file "benchmark.00000021" exists already and will be deleted
+WARNING: The file "benchmark.00000001" exists already and will be deleted
+WARNING: The file "benchmark.00000002" exists already and will be deleted
+WARNING: The file "benchmark.00000006" exists already and will be deleted
+WARNING: The file "benchmark.00000012" exists already and will be deleted
+WARNING: The file "benchmark.00000013" exists already and will be deleted
+WARNING: The file "benchmark.00000023" exists already and will be deleted
+WARNING: The file "benchmark.00000026" exists already and will be deleted
+WARNING: The file "benchmark.00000028" exists already and will be deleted
+WARNING: The file "benchmark.00000027" exists already and will be deleted
+WARNING: The file "benchmark.00000007" exists already and will be deleted
+WARNING: The file "benchmark.00000005" exists already and will be deleted
+WARNING: The file "benchmark.00000003" exists already and will be deleted
+WARNING: The file "benchmark.00000008" exists already and will be deleted
+WARNING: The file "benchmark.00000010" exists already and will be deleted
+WARNING: The file "benchmark.00000020" exists already and will be deleted
+WARNING: The file "benchmark.00000030" exists already and will be deleted
+WARNING: The file "benchmark.00000009" exists already and will be deleted
+WARNING: The file "benchmark.00000015" exists already and will be deleted
+WARNING: The file "benchmark.00000031" exists already and will be deleted
+WARNING: The file "benchmark.00000017" exists already and will be deleted
+WARNING: The file "benchmark.00000025" exists already and will be deleted
+WARNING: The file "benchmark.00000029" exists already and will be deleted
+WARNING: The file "benchmark.00000016" exists already and will be deleted
+WARNING: The file "benchmark.00000022" exists already and will be deleted
+WARNING: The file "benchmark.00000018" exists already and will be deleted
+WARNING: The file "benchmark.00000019" exists already and will be deleted
+Path                : benchmark.00000000
+FS                  : 14.6 TiB   Used FS: 2.1%   Inodes: 16382.0 Mi   Used Inodes: 3.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : benchmark
+access              : file-per-process
+type                : independent
+segments            : 10
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 4
+tasks               : 144
+clients per node    : 36
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 5
+xfersize            : 2 MiB
+blocksize           : 16 MiB
+aggregate filesize  : 22.50 GiB
+
+Results: 
+WARNING: The file "benchmark.00000000" exists already and will be deleted
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     11262      5633       0.236177    16384      2048.00    0.985168   2.05       1.23       2.05       0   
+read      9506       4754       0.276573    16384      2048.00    0.037723   2.42       1.10       2.42       0   
+write     11628      5816       0.169877    16384      2048.00    0.820925   1.98       1.29       1.98       1   
+read      9255       4628       0.173420    16384      2048.00    0.037805   2.49       1.28       2.49       1   
+write     11205      5604       0.220746    16384      2048.00    0.930652   2.06       1.28       2.06       2   
+read      9427       4714       0.201956    16384      2048.00    0.038480   2.44       1.47       2.44       2   
+write     11679      5841       0.106617    16384      2048.00    0.918052   1.97       1.15       1.97       3   
+read      9643       4822       0.257673    16384      2048.00    0.037890   2.39       1.25       2.39       3   
+write     11629      5816       0.241586    16384      2048.00    0.939096   1.98       1.23       1.98       4   
+read      9872       4937       0.270633    16384      2048.00    0.053146   2.33       1.19       2.33       4   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       11678.74   11204.97   11480.40     203.34    5839.37    5602.49    5740.20     101.67    2.00753         NA            NA     0    144  36    5   1     1        1         0    0     10 16777216  2097152   23040.0 POSIX      0
+read         9872.01    9254.67    9540.43     207.90    4936.01    4627.33    4770.22     103.95    2.41613         NA            NA     0    144  36    5   1     1        1         0    0     10 16777216  2097152   23040.0 POSIX      0
+Finished            : Mon Feb 26 14:34:47 2024
+stripes: 1

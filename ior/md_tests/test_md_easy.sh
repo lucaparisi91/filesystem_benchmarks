@@ -3,18 +3,20 @@ set -x
 source settings.sh 
 
 DATA_DIR=${DATA_BASE_DIR}/md_easy
-REPORT_DIR=${REPORT_BASE_DIR}/md_easy_onOST
+REPORT_DIR=${REPORT_BASE_DIR}/md_easy
 
 rm -rf ${DATA_DIR}
 mkdir -p ${DATA_DIR}
 mkdir -p ${REPORT_DIR}
 
+
 #lfs setstripe -E 64K -L mdt ${DATA_DIR}
 num_nodes=${SLURM_NNODES}
 cd $DATA_DIR
-for nfiles in 1000 10000 100000
+
+for nfiles in ${NFILES[*]}
 do 
-    for cpus_per_node in 32 64 128
+    for cpus_per_node in ${CPUS_PER_NODE[*]}
     do
         ntasks=$(( ${num_nodes}*${cpus_per_node}))
         REPORT_FILE_BASE="${REPORT_DIR}/report-md-${num_nodes}N-${cpus_per_node}cpN-nf${nfiles}-$(date +%Y-%m-%d-%H.%M.%S)"

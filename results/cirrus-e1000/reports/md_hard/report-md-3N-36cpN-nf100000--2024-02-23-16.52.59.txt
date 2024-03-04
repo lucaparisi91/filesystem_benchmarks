@@ -1,0 +1,33 @@
+-- started at 02/23/2024 16:53:03 --
+
+mdtest-4.1.0+dev was launched with 108 total task(s) on 3 node(s)
+Command line used: /work/z04/z04/lparisi/e1000_benchmarking/sw/ior/bin/mdtest '-n' '925' '-F' '-t' '-P' '-w' '3901' '-e' '3901' '-i' '5' '-G' '-498257018' '-N' '1' '-Y' '-a' 'POSIX' '--saveRankPerformanceDetails=/work/z04/z04/lparisi/e1000_benchmarking/reports/md_hard/report-md-3N-36cpN-nf100000--2024-02-23-16.52.59.csv'
+Nodemap: 111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000
+Path                : ./out
+FS                  : 14.6 TiB   Used FS: 2.1%   Inodes: 16382.0 Mi   Used Inodes: 3.9%
+V-0: Rank   0 Line  2581 Shifting ranks by 36 for each phase.
+108 tasks, 99900 files
+
+SUMMARY rate (in ops/sec): (of 5 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                6227.074       2091.970       3501.683       1877.412
+   File stat                   52336.131      49569.627      50587.595       1162.642
+   File read                   32786.132      31174.259      32104.765        648.192
+   File removal                 3937.486       3844.411       3880.366         35.658
+   Tree creation                2262.300        977.465       1933.963        539.485
+   Tree removal                  653.115        625.829        639.215         10.998
+
+SUMMARY time (in ops/sec): (of 5 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                  47.754         16.043         34.870         15.014
+   File stat                       2.015          1.909          1.976          0.045
+   File read                       3.205          3.047          3.113          0.063
+   File removal                   25.986         25.372         25.747          0.235
+   Tree creation                   0.001          0.000          0.001          0.000
+   Tree removal                    0.002          0.002          0.002          0.000
+-- finished at 02/23/2024 16:58:32 --
+
+stripes: 1
+nodes: 3

@@ -1,0 +1,51 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Feb 20 17:01:21 2024
+Command line        : /work/z04/z04/lparisi/e1000_benchmarking/sw/ior/bin/ior -b 16m -t 2m -s 1000 -e -i 5 -C -O testFile=benchmark
+Machine             : Linux r1i3n22
+TestID              : 0
+StartTime           : Tue Feb 20 17:01:21 2024
+Path                : benchmark
+FS                  : 14.6 TiB   Used FS: 2.0%   Inodes: 16382.0 Mi   Used Inodes: 3.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : benchmark
+access              : single-shared-file
+type                : independent
+segments            : 1000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 36
+clients per node    : 36
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 5
+xfersize            : 2 MiB
+blocksize           : 16 MiB
+aggregate filesize  : 562.50 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     1121.49    560.75     63.81       16384      2048.00    0.001313   513.60     6.62       513.60     0   
+read      2563.86    1281.93    28.07       16384      2048.00    0.010854   224.66     2.61       224.66     0   
+write     1152.41    576.21     62.29       16384      2048.00    0.001936   499.82     4.32       499.82     1   
+read      2595.71    1297.86    27.72       16384      2048.00    0.010060   221.90     3.32       221.90     1   
+write     1123.50    561.75     63.44       16384      2048.00    0.001713   512.68     6.75       512.69     2   
+read      2562.68    1281.34    28.06       16384      2048.00    0.010484   224.76     3.13       224.76     2   
+write     1163.73    581.87     60.63       16384      2048.00    0.001986   494.96     10.55      494.96     3   
+read      2593.08    1296.54    27.74       16384      2048.00    0.008066   222.13     2.89       222.13     3   
+write     1120.92    560.46     63.56       16384      2048.00    0.002020   513.86     7.68       513.86     4   
+read      2562.37    1281.19    28.09       16384      2048.00    0.008783   224.79     3.63       224.79     4   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        1163.73    1120.92    1136.41      18.07     581.87     560.46     568.20       9.03  506.98641         NA            NA     0     36  36    5   0     1        1         0    0   1000 16777216  2097152  576000.0 POSIX      0
+read         2595.71    2562.37    2575.54      15.43    1297.86    1281.18    1287.77       7.71  223.65025         NA            NA     0     36  36    5   0     1        1         0    0   1000 16777216  2097152  576000.0 POSIX      0
+Finished            : Tue Feb 20 18:04:20 2024
+stripes: 4

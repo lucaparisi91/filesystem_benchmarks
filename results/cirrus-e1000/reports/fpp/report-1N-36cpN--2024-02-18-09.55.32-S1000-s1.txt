@@ -1,0 +1,50 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Feb 18 09:55:36 2024
+Command line        : /work/z04/z04/lparisi/e1000_benchmarking/sw/ior/bin/ior -b 16m -t 2m -s 1000 -e -i 10 -C -F -O testFile=benchmark
+Machine             : Linux r1i3n22
+TestID              : 0
+StartTime           : Sun Feb 18 09:55:36 2024
+Path                : benchmark.00000000
+FS                  : 14.6 TiB   Used FS: 0.2%   Inodes: 16382.0 Mi   Used Inodes: 3.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : benchmark
+access              : file-per-process
+type                : independent
+segments            : 1000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 36
+clients per node    : 36
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 10
+xfersize            : 2 MiB
+blocksize           : 16 MiB
+aggregate filesize  : 562.50 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     6038       3019.12    10.69       16384      2048.00    0.376802   95.39      13.43      95.39      0   
+read      5982       2990.95    11.10       16384      2048.00    0.001803   96.29      20.82      96.29      0   
+write     5993       2996.39    11.91       16384      2048.00    0.520945   96.12      13.63      96.12      1   
+read      6011       3005.59    11.98       16384      2048.00    0.001875   95.82      18.02      95.82      1   
+write     5836       2918.20    10.54       16384      2048.00    0.430684   98.69      15.73      98.69      2   
+read      5905       2952.40    11.40       16384      2048.00    0.001987   97.55      19.54      97.55      2   
+write     6026       3012.90    10.46       16384      2048.00    0.526636   95.59      14.30      95.59      3   
+read      6000       3000.00    9.19        16384      2048.00    0.003873   96.00      22.45      96.00      3   
+write     5880       2940.18    10.33       16384      2048.00    0.444830   97.95      16.79      97.96      4   
+read      5966       2983.15    11.20       16384      2048.00    0.003908   96.54      17.74      96.54      4   
+write     6054       3026.86    10.67       16384      2048.00    0.473637   95.15      13.96      95.15      5   
+read      5902       2951.25    10.85       16384      2048.00    0.003331   97.59      14.82      97.59      5   
+write     6021       3010.75    10.67       16384      2048.00    0.453960   95.66      13.22      95.66      6   
+read      6012       3006.14    11.89       16384      2048.00    0.003695   95.80      22.74      95.81      6   
+write     5952       2976.04    12.09       16384      2048.00    0.526986   96.77      14.47      96.78      7   
+read      5966       2982.88    12.07       16384      2048.00    0.003736   96.55      18.07      96.55      7   
