@@ -8,4 +8,7 @@ We tested parallel writing to a single shared filed aligned in blocks of 2MiB , 
 For up to 4 nodes, we see a modest increase in performance as increasing the number of stripes, possibly due to the fact the number of nodes is to small to effectively benefit from striping. Maximum observed write bandwith was about 5.5 GiB/s.
 
 ![Write to shared file](singleShared-write.png).
+
 *Bandwith in function of the number of stripes with 36 tasks per node and different number of nodes. Performance increase with number of stripes is limited to higher node counts.*
+
+![Read to shared file](singleShared-read.png).
