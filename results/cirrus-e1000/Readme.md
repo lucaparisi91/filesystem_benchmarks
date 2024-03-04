@@ -12,3 +12,25 @@ For up to 4 nodes, we see a modest increase in performance as increasing the num
 *Bandwith in function of the number of stripes with 36 tasks per node and different number of nodes. Performance increase with number of stripes is limited to higher node counts.*
 
 ![Read to shared file](singleShared-read.png).
+
+## File per process
+
+We tested file per process bandwith, memory aligned, transfers of 2MiB in 100 segments of size 16GiB . 
+
+![Write a file per process](fpp-write.png).
+
+*Bandwith in function of the number of tasks for 1 node and 4 nodes. A single node tops at ~6GiB/s while 4 nodes bandwith tops at ~11GiB/s*.
+
+## Metadata -- easy
+
+Me made a simple metadata test creating empty files, each rank creating files in a different folder.
+
+![Easy metadata test](md-easy.png).
+
+* Rate of metadata operations in function of the total number of files operated on. Both creation and removal tops at ~35KOP/s, while `stat` operation reach over 80 KOP/s  *
+
+## Metadata -- hard
+
+![Hard metadata test](md-hard.png).
+
+* Rate in function of the number of files in thousand of operations per second. With 4 nodes creation rate tops at 9 KOPS/s for file creation and 6 for data removal. This is likely due to directory locking. The performance of stat operations peaks at about 80 KOP/s.*
