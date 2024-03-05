@@ -1,0 +1,31 @@
+
+{
+  "results": "/work/z04/shared/reframe_io/23-10-23/singleNode/unstriped",
+  "dataDir": "/var/mnt/e1000test/test-dir/lparisi/23.10.23/singleNode/unstriped",
+  "nTasks": 1,
+  "nTasksPerNode" : 1,
+  "mdtest":
+  {
+    "easy":
+    {
+      "nFiles": 700000
+    },
+    "hard":
+    {
+      "nFiles": 500000
+    }    
+  },
+"ior":
+{
+  "easy":
+  {
+    "fileSize": 800
+  },
+  "hard":
+    {
+    "fileSize": 300
+    }
+}
+
+}
+

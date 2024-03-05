@@ -1,0 +1,31 @@
+{
+  "results": "/work/z04/shared/test-E1000/configuration_switch/results/productionFS/16N36tpn/striped",
+  "dataDir": "/work/z04/shared/test-E1000/configuration_switch/dataDir/productionFS/16N36tpn/striped",
+  "nTasks": 576,
+  "nTasksPerNode" : 36,
+  "striped" : true,
+  "mdtest":
+  {
+    "easy":
+    {
+      "nFiles": 420000
+    },
+    "hard":
+    {
+      "nFiles": 300000
+    }    
+  },
+"ior":
+{
+  "easy":
+  {
+    "fileSize": 1300
+  },
+  "hard":
+    {
+    "fileSize": 87
+    }
+}
+
+}
+

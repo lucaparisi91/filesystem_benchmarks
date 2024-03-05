@@ -1,0 +1,31 @@
+{
+  "results": "/work/z04/shared/test-E1000/configuration_switch/results/currentFS/1N36tpnGPU/striped",
+  "dataDir": "/work/z04/shared/test-E1000/configuration_switch/dataDir/currentFS/1N36tpnGPU/striped",
+  "nTasks": 36,
+  "nTasksPerNode" : 36,
+  "striped" : true,
+  "mdtest":
+  {
+    "easy":
+    {
+      "nFiles": 16800000
+    },
+    "hard":
+    {
+      "nFiles": 8000000
+    }    
+  },
+"ior":
+{
+  "easy":
+  {
+    "fileSize": 13000
+  },
+  "hard":
+    {
+    "fileSize": 40
+    }
+}
+
+}
+

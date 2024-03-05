@@ -1,0 +1,31 @@
+{
+  "results": "/work/z04/shared/test-E1000/io500_benchmarks/24.10.23/current/10N1tpn/striped",
+  "dataDir": "/work/z04/shared/test-E1000/io500_benchmarks/24.10.23/current/data/10N1tpn/striped",
+  "nTasks": 10,
+  "nTasksPerNode" : 1,
+  "mdtest":
+  {
+    "easy":
+    {
+      "nFiles": 42
+    },
+    "hard":
+    {
+      "nFiles": 30
+    }    
+  },
+"ior":
+{
+  "easy":
+  {
+    "fileSize": 3200
+  },
+  "hard":
+    {
+    "fileSize": 15
+    }
+}
+
+
+}
+

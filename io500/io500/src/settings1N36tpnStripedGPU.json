@@ -1,0 +1,31 @@
+{
+  "results": "/work/z04/shared/test-E1000/configuration_switch/results/1N36tpnGPU/striped",
+  "dataDir": "/var/mnt/e1000test/test-dir/lparisi/configuration_switch/1N36tpn/striped/3",
+  "nTasks": 36,
+  "nTasksPerNode" : 36,
+  "striped" : true,
+  "mdtest":
+  {
+    "easy":
+    {
+      "nFiles": 16800000
+    },
+    "hard":
+    {
+      "nFiles": 8000000
+    }    
+  },
+"ior":
+{
+  "easy":
+  {
+    "fileSize": 13000
+  },
+  "hard":
+    {
+    "fileSize": 400
+    }
+}
+
+}
+

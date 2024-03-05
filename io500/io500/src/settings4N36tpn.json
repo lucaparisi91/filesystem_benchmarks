@@ -1,0 +1,31 @@
+{
+  "results": "/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/out",
+  "dataDir": "/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/io500",
+  "nTasks": 144,
+  "nTasksPerNode" : 36,
+  "striped" : true,
+  "mdtest":
+  {
+    "easy":
+    {
+      "nFiles": 4200000
+    },
+    "hard":
+    {
+      "nFiles": 3000000
+    }    
+  },
+"ior":
+{
+  "easy":
+  {
+    "fileSize": 3200
+  },
+  "hard":
+    {
+    "fileSize": 300
+    }
+}
+
+}
+
