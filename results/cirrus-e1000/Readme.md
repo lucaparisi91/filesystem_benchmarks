@@ -34,3 +34,7 @@ Me made a simple metadata test creating empty files, each rank creating files in
 ![Hard metadata test](md-hard.png).
 
 * Rate in function of the number of files in thousand of operations per second. With 4 nodes creation rate tops at 9 KOPS/s for file creation and 6 for data removal. This is likely due to directory locking. The performance of stat operations peaks at about 80 KOP/s.*
+
+## IO500 
+
+Results from io500 runs on a striped directory with 16 CPU nodes are summarized in a [csv file])(io500/16N/io500_agg.txt)

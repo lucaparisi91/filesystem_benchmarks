@@ -1,0 +1,216 @@
+{
+  "session_info": {
+    "cmdline": "/work/y07/shared/cirrus-software/reframe/bin/reframe -C cirrus_settings.py -v -R -c io500/ --name io500 -r -J exclusive -J qos=reservation -J account=z04 -J reservation=cse-ipa --report-file /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/reports/11-03-2024_20.56.json",
+    "config_files": [
+      "<builtin>",
+      "cirrus_settings.py"
+    ],
+    "data_version": "3.1",
+    "hostname": "cirrus-login3",
+    "log_files": [
+      "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/reframe.out",
+      "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/reframe.log"
+    ],
+    "prefix_output": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/output",
+    "prefix_stage": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/stage",
+    "user": "lparisi",
+    "version": "4.6.0-dev.1",
+    "workdir": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500",
+    "time_start": "2024-03-11T20:56:12+0000",
+    "time_end": "2024-03-11T22:00:38+0000",
+    "time_elapsed": 3866.4432830810547,
+    "num_cases": 1,
+    "num_failures": 0
+  },
+  "runs": [
+    {
+      "num_cases": 1,
+      "num_failures": 0,
+      "num_aborted": 0,
+      "num_skipped": 0,
+      "runid": 0,
+      "testcases": [
+        {
+          "build_stderr": "rfm_build.err",
+          "build_stdout": "rfm_build.out",
+          "dependencies_actual": [],
+          "dependencies_conceptual": [],
+          "description": "",
+          "display_name": "io500 %lang=cpp %settings=settings16Nt36tpn.json %num_nodes=16",
+          "environment": "gnu",
+          "fail_phase": null,
+          "fail_reason": null,
+          "filename": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/io500/io500.py",
+          "fixture": false,
+          "hash": "c8492102",
+          "jobid": "5519204",
+          "job_stderr": "rfm_job.err",
+          "job_stdout": "rfm_job.out",
+          "maintainers": [],
+          "name": "io500 %lang=cpp %settings=settings16Nt36tpn.json %num_nodes=16",
+          "nodelist": [
+            "r1i0n1",
+            "r1i0n7",
+            "r1i0n14",
+            "r1i0n16",
+            "r1i2n32",
+            "r1i3n22",
+            "r1i3n23",
+            "r1i3n24",
+            "r1i3n25",
+            "r1i7n12",
+            "r1i7n13",
+            "r1i7n14",
+            "r1i7n15",
+            "r2i0n2",
+            "r2i0n11",
+            "r2i0n15"
+          ],
+          "outputdir": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/output/cirrus/compute/gnu/io500_c8492102",
+          "perfvars": [
+            {
+              "name": "ior-easy-read",
+              "reference": 0,
+              "thres_lower": null,
+              "thres_upper": null,
+              "unit": "",
+              "value": 14.050179
+            },
+            {
+              "name": "ior-easy-write",
+              "reference": 0,
+              "thres_lower": null,
+              "thres_upper": null,
+              "unit": "",
+              "value": 11.043171
+            },
+            {
+              "name": "ior-hard-write",
+              "reference": 0,
+              "thres_lower": null,
+              "thres_upper": null,
+              "unit": "",
+              "value": 0.386055
+            },
+            {
+              "name": "ior-hard-read",
+              "reference": 0,
+              "thres_lower": null,
+              "thres_upper": null,
+              "unit": "",
+              "value": 4.564594
+            },
+            {
+              "name": "mdtest-easy-write",
+              "reference": 0,
+              "thres_lower": null,
+              "thres_upper": null,
+              "unit": "",
+              "value": 8.827097
+            },
+            {
+              "name": "mdtest-hard-write",
+              "reference": 0,
+              "thres_lower": null,
+              "thres_upper": null,
+              "unit": "",
+              "value": 9.225871
+            },
+            {
+              "name": "mdtest-easy-stat",
+              "reference": 0,
+              "thres_lower": null,
+              "thres_upper": null,
+              "unit": "",
+              "value": 19.194636
+            },
+            {
+              "name": "mdtest-hard-stat",
+              "reference": 0,
+              "thres_lower": null,
+              "thres_upper": null,
+              "unit": "",
+              "value": 8.936844
+            }
+          ],
+          "prefix": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/io500",
+          "result": "success",
+          "stagedir": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/stage/cirrus/compute/gnu/io500_c8492102",
+          "scheduler": "slurm",
+          "system": "cirrus:compute",
+          "tags": [],
+          "time_compile": 147.93256378173828,
+          "time_performance": 0.011603355407714844,
+          "time_run": 3718.1524596214294,
+          "time_sanity": 0.09866213798522949,
+          "time_setup": 0.1651163101196289,
+          "time_total": 3866.3975126743317,
+          "unique_name": "io500",
+          "check_vars": {
+            "valid_prog_environs": [
+              "gnu"
+            ],
+            "valid_systems": [
+              "cirrus:compute"
+            ],
+            "descr": "",
+            "sourcepath": "",
+            "sourcesdir": "src",
+            "prebuild_cmds": [],
+            "postbuild_cmds": [],
+            "executable": "io500/io500",
+            "executable_opts": [
+              "config.ini"
+            ],
+            "prerun_cmds": [
+              "source generate_config.sh"
+            ],
+            "postrun_cmds": [],
+            "keep_files": [],
+            "readonly_files": [],
+            "tags": [],
+            "maintainers": [],
+            "strict_check": true,
+            "num_tasks": 576,
+            "num_tasks_per_node": 36,
+            "num_gpus_per_node": null,
+            "num_cpus_per_task": 1,
+            "num_tasks_per_core": null,
+            "num_tasks_per_socket": null,
+            "use_multithreading": null,
+            "max_pending_time": null,
+            "exclusive_access": false,
+            "local": false,
+            "modules": [
+              "python/3.9.13",
+              "openmpi",
+              "gcc"
+            ],
+            "env_vars": {
+              "OMP_NUM_THREADS": 1,
+              "UCX_LOG_LEVEL": "INFO",
+              "UCX_TLS": "rc,self,sm",
+              "SETTINGS_JSON": "settings16Nt36tpn.json"
+            },
+            "variables": {
+              "OMP_NUM_THREADS": 1,
+              "UCX_LOG_LEVEL": "INFO",
+              "UCX_TLS": "rc,self,sm",
+              "SETTINGS_JSON": "settings16Nt36tpn.json"
+            },
+            "time_limit": 14400.0,
+            "build_time_limit": null,
+            "extra_resources": {},
+            "build_locally": true
+          },
+          "check_params": {
+            "lang": "cpp",
+            "settings": "settings16Nt36tpn.json",
+            "num_nodes": 16
+          }
+        }
+      ]
+    }
+  ],
+  "restored_cases": []
+}

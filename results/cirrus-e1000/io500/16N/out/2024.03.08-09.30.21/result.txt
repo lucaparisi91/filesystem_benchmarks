@@ -1,0 +1,12 @@
+[run]
+procs           = 576
+version         = io500-sc23_v1
+config-hash     = F3D9A75B
+result-dir      = /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.08-09.30.21
+mode            = standard
+; START 2024-03-08 09:30:21
+
+
+[ior-easy-write]
+t_start         = 2024-03-08 09:30:21
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -345033669 -k -e -o /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.08-09.30.21/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.08-09.30.21/ior-easy.stonewall -t 2m -b 5688m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.08-09.30.21/ior-easy-write.csv

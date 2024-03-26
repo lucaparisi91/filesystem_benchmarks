@@ -1,0 +1,36 @@
+[run]
+procs           = 576
+version         = io500-sc23_v1
+config-hash     = F3D9A75B
+result-dir      = /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.12-15.45.58
+mode            = standard
+; START 2024-03-12 15:46:00
+
+
+[ior-easy-write]
+t_start         = 2024-03-12 15:46:01
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -345557362 -k -e -o /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.12-15.45.58/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.12-15.45.58/ior-easy.stonewall -t 2m -b 5688m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.12-15.45.58/ior-easy-write.csv
+; ERROR INVALID Write phase needed 275.279233s instead of stonewall 300s. Stonewall was hit at 274.3s
+throughput-stonewall = 11.66
+; ERROR INVALID Runtime of phase (276.005401) is below stonewall time. This shouldn't happen!
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 11.622744
+t_delta         = 276.0054
+t_end           = 2024-03-12 15:50:37
+
+[mdtest-easy-write]
+t_start         = 2024-03-12 15:50:37
+exe             = ./mdtest --dataPacketType=timestamp -n 7291 -u -L -F -P -G 540620433 -N 1 -d /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.12-15.45.58/mdtest-easy -x /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.12-15.45.58/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.12-15.45.58/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 12.700099
+score           = 12.550575
+t_delta         = 336.2164
+t_end           = 2024-03-12 15:56:13
+
+[timestamp]
+t_start         = 2024-03-12 15:56:13
+t_delta         = 0.0012
+t_end           = 2024-03-12 15:56:13
+
+[ior-hard-write]
+t_start         = 2024-03-12 15:56:13
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-345546674 -k -e -o /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.12-15.45.58/ior-hard/file -O stoneWallingStatusFile=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.12-15.45.58/ior-hard.stonewall -t 47008 -b 47008 -s 11896 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.12-15.45.58/ior-hard-write.csv -O stoneWallingWearOut=1

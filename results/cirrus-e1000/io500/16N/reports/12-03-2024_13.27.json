@@ -1,0 +1,147 @@
+{
+  "session_info": {
+    "cmdline": "/work/y07/shared/cirrus-software/reframe/bin/reframe -C cirrus_settings.py -v -R -c io500/ --name io500 -r -J exclusive -J account=z04 --report-file /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/reports/12-03-2024_13.27.json",
+    "config_files": [
+      "<builtin>",
+      "cirrus_settings.py"
+    ],
+    "data_version": "3.1",
+    "hostname": "cirrus-login3",
+    "log_files": [
+      "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/reframe.out",
+      "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/reframe.log"
+    ],
+    "prefix_output": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/output",
+    "prefix_stage": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/stage",
+    "user": "lparisi",
+    "version": "4.6.0-dev.1",
+    "workdir": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500",
+    "time_start": "2024-03-12T13:27:17+0000",
+    "time_end": "2024-03-12T13:29:36+0000",
+    "time_elapsed": 139.27267146110535,
+    "num_cases": 1,
+    "num_failures": 1
+  },
+  "runs": [
+    {
+      "num_cases": 1,
+      "num_failures": 1,
+      "num_aborted": 0,
+      "num_skipped": 0,
+      "runid": 0,
+      "testcases": [
+        {
+          "build_stderr": "rfm_build.err",
+          "build_stdout": "rfm_build.out",
+          "dependencies_actual": [],
+          "dependencies_conceptual": [],
+          "description": "",
+          "display_name": "io500 %lang=cpp %settings=settings16Nt36tpn.json %num_nodes=16",
+          "environment": "gnu",
+          "fail_phase": "run",
+          "fail_reason": "spawned process error: command 'sbatch rfm_job.sh' failed with exit code 1:\n--- stdout ---\n--- stdout ---\n--- stderr ---\nsbatch: error: Job rejected: Please specify a QoS.\nsbatch: error: Batch job submission failed: Unspecified error\n\n--- stderr ---",
+          "filename": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/io500/io500.py",
+          "fixture": false,
+          "hash": "c8492102",
+          "jobid": "None",
+          "job_stderr": "rfm_job.err",
+          "job_stdout": "rfm_job.out",
+          "maintainers": [],
+          "name": "io500 %lang=cpp %settings=settings16Nt36tpn.json %num_nodes=16",
+          "nodelist": [],
+          "outputdir": null,
+          "perfvars": null,
+          "prefix": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/io500",
+          "result": "failure",
+          "stagedir": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/stage/cirrus/compute/gnu/io500_c8492102",
+          "scheduler": "slurm",
+          "system": "cirrus:compute",
+          "tags": [],
+          "time_compile": 137.54873704910278,
+          "time_performance": null,
+          "time_run": 0.48750782012939453,
+          "time_sanity": null,
+          "time_setup": 1.0362212657928467,
+          "time_total": 139.2202606201172,
+          "unique_name": "io500",
+          "fail_info": {
+            "exc_type": "SpawnedProcessError",
+            "exc_value": "command 'sbatch rfm_job.sh' failed with exit code 1:\n--- stdout ---\n--- stdout ---\n--- stderr ---\nsbatch: error: Job rejected: Please specify a QoS.\nsbatch: error: Batch job submission failed: Unspecified error\n\n--- stderr ---",
+            "traceback": [
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/frontend/executors/__init__.py\", line 317, in _safe_call\n    return fn(*args, **kwargs)\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/core/hooks.py\", line 109, in _fn\n    func(obj, *args, **kwargs)\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/core/pipeline.py\", line 2026, in run\n    self._job.submit()\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/core/schedulers/__init__.py\", line 584, in submit\n    return self.scheduler.submit(self)\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/core/schedulers/slurm.py\", line 257, in submit\n    completed = _run_strict(cmd, timeout=self._submit_timeout)\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/utility/osext.py\", line 292, in run_command\n    completed.returncode)\n"
+            ]
+          },
+          "fail_severe": false,
+          "check_vars": {
+            "valid_prog_environs": [
+              "gnu"
+            ],
+            "valid_systems": [
+              "cirrus:compute"
+            ],
+            "descr": "",
+            "sourcepath": "",
+            "sourcesdir": "src",
+            "prebuild_cmds": [],
+            "postbuild_cmds": [],
+            "executable": "io500/io500",
+            "executable_opts": [
+              "config.ini"
+            ],
+            "prerun_cmds": [
+              "source generate_config.sh"
+            ],
+            "postrun_cmds": [],
+            "keep_files": [],
+            "readonly_files": [],
+            "tags": [],
+            "maintainers": [],
+            "strict_check": true,
+            "num_tasks": 576,
+            "num_tasks_per_node": 36,
+            "num_gpus_per_node": null,
+            "num_cpus_per_task": 1,
+            "num_tasks_per_core": null,
+            "num_tasks_per_socket": null,
+            "use_multithreading": null,
+            "max_pending_time": null,
+            "exclusive_access": false,
+            "local": false,
+            "modules": [
+              "python/3.9.13",
+              "openmpi",
+              "gcc"
+            ],
+            "env_vars": {
+              "OMP_NUM_THREADS": 1,
+              "UCX_LOG_LEVEL": "INFO",
+              "UCX_TLS": "rc,self,sm",
+              "SETTINGS_JSON": "settings16Nt36tpn.json"
+            },
+            "variables": {
+              "OMP_NUM_THREADS": 1,
+              "UCX_LOG_LEVEL": "INFO",
+              "UCX_TLS": "rc,self,sm",
+              "SETTINGS_JSON": "settings16Nt36tpn.json"
+            },
+            "time_limit": 14400.0,
+            "build_time_limit": null,
+            "extra_resources": {},
+            "build_locally": true
+          },
+          "check_params": {
+            "lang": "cpp",
+            "settings": "settings16Nt36tpn.json",
+            "num_nodes": 16
+          }
+        }
+      ]
+    }
+  ],
+  "restored_cases": []
+}

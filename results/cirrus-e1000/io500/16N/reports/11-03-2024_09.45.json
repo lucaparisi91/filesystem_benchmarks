@@ -1,0 +1,147 @@
+{
+  "session_info": {
+    "cmdline": "/work/y07/shared/cirrus-software/reframe/bin/reframe -C cirrus_settings.py -v -R -c io500/ --name io500 -r -J exclusive -J qos=reservation -J account=z04 -J reservation=cse-ipa --report-file /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/reports/11-03-2024_09.45.json",
+    "config_files": [
+      "<builtin>",
+      "cirrus_settings.py"
+    ],
+    "data_version": "3.1",
+    "hostname": "cirrus-login3",
+    "log_files": [
+      "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/reframe.out",
+      "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/reframe.log"
+    ],
+    "prefix_output": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/output",
+    "prefix_stage": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/stage",
+    "user": "lparisi",
+    "version": "4.6.0-dev.1",
+    "workdir": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500",
+    "time_start": "2024-03-11T09:45:54+0000",
+    "time_end": "2024-03-11T09:54:09+0000",
+    "time_elapsed": 494.9625542163849,
+    "num_cases": 1,
+    "num_failures": 1
+  },
+  "runs": [
+    {
+      "num_cases": 1,
+      "num_failures": 1,
+      "num_aborted": 0,
+      "num_skipped": 0,
+      "runid": 0,
+      "testcases": [
+        {
+          "build_stderr": "rfm_build.err",
+          "build_stdout": "rfm_build.out",
+          "dependencies_actual": [],
+          "dependencies_conceptual": [],
+          "description": "",
+          "display_name": "io500 %lang=cpp %settings=settings16Nt36tpn.json %num_nodes=16",
+          "environment": "gnu",
+          "fail_phase": "sanity",
+          "fail_reason": "sanity error: rfm_job.out: No such file or directory",
+          "filename": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/io500/io500.py",
+          "fixture": false,
+          "hash": "c8492102",
+          "jobid": "5511403",
+          "job_stderr": "rfm_job.err",
+          "job_stdout": "rfm_job.out",
+          "maintainers": [],
+          "name": "io500 %lang=cpp %settings=settings16Nt36tpn.json %num_nodes=16",
+          "nodelist": [],
+          "outputdir": null,
+          "perfvars": null,
+          "prefix": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/io500",
+          "result": "failure",
+          "stagedir": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/stage/cirrus/compute/gnu/io500_c8492102",
+          "scheduler": "slurm",
+          "system": "cirrus:compute",
+          "tags": [],
+          "time_compile": 127.96331477165222,
+          "time_performance": null,
+          "time_run": 366.6304123401642,
+          "time_sanity": 0.0016717910766601562,
+          "time_setup": 0.15489745140075684,
+          "time_total": 494.89425563812256,
+          "unique_name": "io500",
+          "fail_info": {
+            "exc_type": "SanityError",
+            "exc_value": "rfm_job.out: No such file or directory",
+            "traceback": [
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/frontend/executors/__init__.py\", line 317, in _safe_call\n    return fn(*args, **kwargs)\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/core/hooks.py\", line 109, in _fn\n    func(obj, *args, **kwargs)\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/core/pipeline.py\", line 2111, in sanity\n    self.check_sanity()\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/core/pipeline.py\", line 2172, in check_sanity\n    success = sn.evaluate(self.sanity_patterns)\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/utility/sanity.py\", line 929, in evaluate\n    return expr.evaluate(cache=cache)\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/core/deferrable.py\", line 78, in evaluate\n    ret = ret.evaluate()\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/core/deferrable.py\", line 73, in evaluate\n    ret = self._fn(*fn_args, **fn_kwargs)\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/utility/sanity.py\", line 440, in assert_found\n    with _open(filename, 'rt', encoding=encoding) as fp:\n",
+              "  File \"/usr/lib64/python3.6/contextlib.py\", line 81, in __enter__\n    return next(self.gen)\n",
+              "  File \"/work/y07/shared/cirrus-software/reframe/reframe/utility/sanity.py\", line 40, in _open\n    raise SanityError(f'{filename}: {e.strerror}')\n"
+            ]
+          },
+          "fail_severe": false,
+          "check_vars": {
+            "valid_prog_environs": [
+              "gnu"
+            ],
+            "valid_systems": [
+              "cirrus:compute"
+            ],
+            "descr": "",
+            "sourcepath": "",
+            "sourcesdir": "src",
+            "prebuild_cmds": [],
+            "postbuild_cmds": [],
+            "executable": "io500/io500",
+            "executable_opts": [
+              "config.ini"
+            ],
+            "prerun_cmds": [
+              "source generate_config.sh"
+            ],
+            "postrun_cmds": [],
+            "keep_files": [],
+            "readonly_files": [],
+            "tags": [],
+            "maintainers": [],
+            "strict_check": true,
+            "num_tasks": 576,
+            "num_tasks_per_node": 36,
+            "num_gpus_per_node": null,
+            "num_cpus_per_task": 1,
+            "num_tasks_per_core": null,
+            "num_tasks_per_socket": null,
+            "use_multithreading": null,
+            "max_pending_time": null,
+            "exclusive_access": false,
+            "local": false,
+            "modules": [
+              "python/3.9.13",
+              "openmpi",
+              "gcc"
+            ],
+            "env_vars": {
+              "OMP_NUM_THREADS": "None",
+              "SETTINGS_JSON": "settings16Nt36tpn.json"
+            },
+            "variables": {
+              "OMP_NUM_THREADS": "None",
+              "SETTINGS_JSON": "settings16Nt36tpn.json"
+            },
+            "time_limit": 86400.0,
+            "build_time_limit": null,
+            "extra_resources": {},
+            "build_locally": true
+          },
+          "check_params": {
+            "lang": "cpp",
+            "settings": "settings16Nt36tpn.json",
+            "num_nodes": 16
+          }
+        }
+      ]
+    }
+  ],
+  "restored_cases": []
+}

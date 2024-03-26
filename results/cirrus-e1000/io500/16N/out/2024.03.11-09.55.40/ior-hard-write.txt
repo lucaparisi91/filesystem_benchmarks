@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Mar 11 10:05:26 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-345808574 -k -e -o /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-09.55.40/ior-hard/file -O stoneWallingStatusFile=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-09.55.40/ior-hard.stonewall -t 47008 -b 47008 -s 11896 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-09.55.40/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux r1i0n1
+TestID              : 0
+StartTime           : Mon Mar 11 10:05:26 2024
+Path                : /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-09.55.40/ior-hard/file
+FS                  : 14.6 TiB   Used FS: 29.4%   Inodes: 16382.0 Mi   Used Inodes: 4.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-09.55.40/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 11896
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 16
+tasks               : 576
+clients per node    : 36
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 299.98 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 5029 max: 11896 -- min data: 0.2 GiB mean data: 0.5 GiB time: 300.1s
+write     827.60     18461      358.21      45.91      45.91      0.007091   371.16     0.000794   371.17     0   

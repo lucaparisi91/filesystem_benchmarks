@@ -1,0 +1,135 @@
+{
+  "session_info": {
+    "cmdline": "/work/y07/shared/cirrus-software/reframe/bin/reframe -C cirrus_settings.py -v -R -c io500/ --name io500 -r -J exclusive -J qos=reservation -J account=z04 -J reservation=cse-ipa --report-file /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/reports/09-03-2024_08.49.json",
+    "config_files": [
+      "<builtin>",
+      "cirrus_settings.py"
+    ],
+    "data_version": "3.1",
+    "hostname": "cirrus-login3",
+    "log_files": [
+      "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/reframe.out",
+      "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/reframe.log"
+    ],
+    "prefix_output": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/output",
+    "prefix_stage": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/stage",
+    "user": "lparisi",
+    "version": "4.6.0-dev.1",
+    "workdir": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500",
+    "time_start": "2024-03-09T08:49:41+0000",
+    "time_end": "2024-03-09T08:49:52+0000",
+    "time_elapsed": 11.248380184173584,
+    "num_cases": 1,
+    "num_failures": 0
+  },
+  "runs": [
+    {
+      "num_cases": 1,
+      "num_failures": 0,
+      "num_aborted": 1,
+      "num_skipped": 0,
+      "runid": 0,
+      "testcases": [
+        {
+          "build_stderr": "rfm_build.err",
+          "build_stdout": "rfm_build.out",
+          "dependencies_actual": [],
+          "dependencies_conceptual": [],
+          "description": "",
+          "display_name": "io500 %lang=cpp %settings=settings16Nt36tpn.json %num_nodes=16",
+          "environment": "gnu",
+          "fail_phase": "compile",
+          "fail_reason": "aborted due to KeyboardInterrupt",
+          "filename": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/io500/io500.py",
+          "fixture": false,
+          "hash": "c8492102",
+          "jobid": "None",
+          "job_stderr": "rfm_job.err",
+          "job_stdout": "rfm_job.out",
+          "maintainers": [],
+          "name": "io500 %lang=cpp %settings=settings16Nt36tpn.json %num_nodes=16",
+          "nodelist": [],
+          "outputdir": null,
+          "perfvars": null,
+          "prefix": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/io500",
+          "result": "aborted",
+          "stagedir": "/mnt/lustre/e1000/home/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/io500/stage/cirrus/compute/gnu/io500_c8492102",
+          "scheduler": "slurm",
+          "system": "cirrus:compute",
+          "tags": [],
+          "time_compile": 9.696181535720825,
+          "time_performance": null,
+          "time_run": null,
+          "time_sanity": null,
+          "time_setup": 1.2481987476348877,
+          "time_total": 10.961270332336426,
+          "unique_name": "io500",
+          "fail_info": {
+            "exc_type": "AbortTaskError",
+            "exc_value": ": ",
+            "traceback": null
+          },
+          "fail_severe": false,
+          "check_vars": {
+            "valid_prog_environs": [
+              "gnu"
+            ],
+            "valid_systems": [
+              "cirrus:compute"
+            ],
+            "descr": "",
+            "sourcepath": "",
+            "sourcesdir": "src",
+            "prebuild_cmds": [],
+            "postbuild_cmds": [],
+            "executable": "io500/io500",
+            "executable_opts": [
+              "config.ini"
+            ],
+            "prerun_cmds": [
+              "source generate_config.sh"
+            ],
+            "postrun_cmds": [],
+            "keep_files": [],
+            "readonly_files": [],
+            "tags": [],
+            "maintainers": [],
+            "strict_check": true,
+            "num_tasks": 1,
+            "num_tasks_per_node": null,
+            "num_gpus_per_node": null,
+            "num_cpus_per_task": null,
+            "num_tasks_per_core": null,
+            "num_tasks_per_socket": null,
+            "use_multithreading": null,
+            "max_pending_time": null,
+            "exclusive_access": false,
+            "local": false,
+            "modules": [
+              "python/3.9.13",
+              "gcc"
+            ],
+            "env_vars": {
+              "OMP_NUM_THREADS": "None",
+              "SETTINGS_JSON": "settings16Nt36tpn.json"
+            },
+            "variables": {
+              "OMP_NUM_THREADS": "None",
+              "SETTINGS_JSON": "settings16Nt36tpn.json"
+            },
+            "time_limit": 86400.0,
+            "build_time_limit": null,
+            "extra_resources": {},
+            "build_locally": true
+          },
+          "check_params": {
+            "lang": "cpp",
+            "settings": "settings16Nt36tpn.json",
+            "num_nodes": 16
+          }
+        }
+      ]
+    }
+  ],
+  "restored_cases": []
+}

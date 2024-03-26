@@ -1,0 +1,32 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Mar 11 14:54:08 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -345824253 -k -e -o /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/ior-easy.stonewall -t 2m -b 5688m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/ior-easy-read.csv
+Machine             : Linux r1i0n1
+TestID              : 0
+StartTime           : Mon Mar 11 14:54:08 2024
+Path                : /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/ior-easy/ior_file_easy.00000000
+FS                  : 14.6 TiB   Used FS: 31.5%   Inodes: 16382.0 Mi   Used Inodes: 4.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 16
+tasks               : 576
+clients per node    : 36
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 5.55 GiB
+aggregate filesize  : 3.12 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      14918      7459       0.077211    5824512    2048.00    0.009978   219.61     0.008067   219.63     0   

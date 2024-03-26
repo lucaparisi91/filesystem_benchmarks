@@ -1,0 +1,114 @@
+[run]
+procs           = 576
+version         = io500-sc23_v1
+config-hash     = F3D9A75B
+result-dir      = /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35
+mode            = standard
+; START 2024-03-11 14:17:35
+
+
+[ior-easy-write]
+t_start         = 2024-03-11 14:17:35
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -345824253 -k -e -o /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/ior-easy.stonewall -t 2m -b 5688m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/ior-easy-write.csv
+; ERROR INVALID Write phase needed 289.289819s instead of stonewall 300s. Stonewall was hit at 288.8s
+throughput-stonewall = 11.08
+; ERROR INVALID Runtime of phase (289.794315) is below stonewall time. This shouldn't happen!
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 11.059843
+t_delta         = 289.7943
+t_end           = 2024-03-11 14:22:25
+
+[mdtest-easy-write]
+t_start         = 2024-03-11 14:22:25
+exe             = ./mdtest --dataPacketType=timestamp -n 7291 -u -L -F -P -G 540353542 -N 1 -d /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/mdtest-easy -x /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 9.172115
+score           = 8.829511
+t_delta         = 393.0123
+t_end           = 2024-03-11 14:28:58
+
+[timestamp]
+t_start         = 2024-03-11 14:28:58
+t_delta         = 0.0009
+t_end           = 2024-03-11 14:28:58
+
+[ior-hard-write]
+t_start         = 2024-03-11 14:28:58
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-345813565 -k -e -o /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/ior-hard/file -O stoneWallingStatusFile=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/ior-hard.stonewall -t 47008 -b 47008 -s 11896 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.33
+score           = 0.257209
+t_delta         = 1166.5284
+t_end           = 2024-03-11 14:48:24
+
+[mdtest-hard-write]
+t_start         = 2024-03-11 14:48:24
+exe             = ./mdtest --dataPacketType=timestamp -n 5208 -t -w 3901 -e 3901 -P -G=540364230 -N 1 -F -d /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/mdtest-hard -x /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 9.796121
+score           = 9.079468
+t_delta         = 331.6135
+t_end           = 2024-03-11 14:53:56
+
+[find]
+t_start         = 2024-03-11 14:53:56
+exe             = ./pfind /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35 -newer /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 576
+found           = 84282
+total-files     = 6460417
+score           = 536.737035
+t_delta         = 12.0818
+t_end           = 2024-03-11 14:54:08
+
+[ior-easy-read]
+t_start         = 2024-03-11 14:54:08
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -345824253 -k -e -o /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/ior-easy.stonewall -t 2m -b 5688m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/ior-easy-read.csv
+score           = 14.567887
+t_delta         = 219.8695
+t_end           = 2024-03-11 14:57:48
+
+[mdtest-easy-stat]
+t_start         = 2024-03-11 14:57:48
+exe             = ./mdtest --dataPacketType=timestamp -n 7291 -u -L -F -P -G 540353542 -N 1 -d /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/mdtest-easy -x /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-easy-stat.csv -a POSIX
+score           = 19.412621
+t_delta         = 179.5728
+t_end           = 2024-03-11 15:00:48
+
+[ior-hard-read]
+t_start         = 2024-03-11 15:00:48
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-345813565 -k -e -o /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/ior-hard/file -O stoneWallingStatusFile=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/ior-hard.stonewall -t 47008 -b 47008 -s 11896 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/ior-hard-read.csv
+score           = 4.787978
+t_delta         = 63.1478
+t_end           = 2024-03-11 15:01:51
+
+[mdtest-hard-stat]
+t_start         = 2024-03-11 15:01:51
+exe             = ./mdtest --dataPacketType=timestamp -n 5208 -t -w 3901 -e 3901 -P -G=540364230 -N 1 -F -d /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/mdtest-hard -x /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-hard-stat.csv -a POSIX
+score           = 13.375863
+t_delta         = 225.4690
+t_end           = 2024-03-11 15:05:36
+
+[mdtest-easy-delete]
+t_start         = 2024-03-11 15:05:36
+exe             = ./mdtest --dataPacketType=timestamp -n 7291 -u -L -F -P -G 540353542 -N 1 -d /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/mdtest-easy -x /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-easy-delete.csv -a POSIX
+score           = 18.072094
+t_delta         = 193.3478
+t_end           = 2024-03-11 15:08:50
+
+[mdtest-hard-read]
+t_start         = 2024-03-11 15:08:50
+exe             = ./mdtest --dataPacketType=timestamp -n 5208 -t -w 3901 -e 3901 -P -G=540364230 -N 1 -F -d /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/mdtest-hard -x /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-hard-read.csv -a POSIX
+score           = 50.992313
+t_delta         = 59.9089
+t_end           = 2024-03-11 15:09:50
+
+[mdtest-hard-delete]
+t_start         = 2024-03-11 15:09:50
+exe             = ./mdtest --dataPacketType=timestamp -n 5208 -t -w 3901 -e 3901 -P -G=540364230 -N 1 -F -d /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/data/08-03/striped/2024.03.11-14.17.35/mdtest-hard -x /work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/work/z04/z04/lparisi/e1000_benchmarking/filesystem_benchmarks/results/cirrus-e1000/io500/16N/out/2024.03.11-14.17.35/mdtest-hard-delete.csv -a POSIX
+score           = 8.390431
+t_delta         = 358.5980
+t_end           = 2024-03-11 15:15:48
+
+[SCORE]
+MD              = 23.284009
+BW              = 3.753149
+SCORE           = 9.348173 [INVALID]
+hash            = 1E0E415A
+; END 2024-03-11 15:15:50

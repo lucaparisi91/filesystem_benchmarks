@@ -1,0 +1,15 @@
+IO500 version io500-sc23_v1 (standard)
+[RESULT]       ior-easy-write       10.948380 GiB/s : time 2.944 seconds [INVALID]
+[RESULT]    mdtest-easy-write       20.812466 kIOPS : time 3.046 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.612207 GiB/s : time 4.979 seconds [INVALID]
+[RESULT]    mdtest-hard-write        2.417077 kIOPS : time 2.221 seconds [INVALID]
+[RESULT]                 find       11.482879 kIOPS : time 3.940 seconds
+[RESULT]        ior-easy-read       14.336148 GiB/s : time 2.243 seconds
+[RESULT]     mdtest-easy-stat       17.646001 kIOPS : time 3.376 seconds
+[RESULT]        ior-hard-read        4.704659 GiB/s : time 0.665 seconds
+[RESULT]     mdtest-hard-stat       14.371266 kIOPS : time 1.225 seconds
+[RESULT]   mdtest-easy-delete       17.011892 kIOPS : time 3.538 seconds
+[RESULT]     mdtest-hard-read       38.216651 kIOPS : time 1.101 seconds
+[RESULT]   mdtest-hard-delete        8.576481 kIOPS : time 1.367 seconds
+[SCORE ] Bandwidth 4.611075 GiB/s : IOPS 13.002147 kiops : TOTAL 7.742989 [INVALID]
