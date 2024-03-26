@@ -37,4 +37,4 @@ Me made a simple metadata test creating empty files, each rank creating files in
 
 ## IO500 
 
-Results from io500 runs on a striped directory with 16 CPU nodes are summarized in a [csv file])(io500/16N/io500_agg.txt)
+Results from io500 runs on a striped directory with 16 CPU nodes are summarized in a [csv file](io500/16N/io500_agg.txt)
