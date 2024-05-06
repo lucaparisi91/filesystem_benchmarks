@@ -1,0 +1,587 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Apr  5 17:27:31 2024
+Command line        : /work/z04/z04/lparisi/e1000_benchmarking/sw/ior/bin/ior -b 16m -t 2m -s 1000 -e -i 5 -C -F -O testFile=benchmark
+Machine             : Linux r1i0n0
+TestID              : 0
+StartTime           : Fri Apr  5 17:27:31 2024
+Path                : benchmark.00000000
+FS                  : 19.5 TiB   Used FS: 72.9%   Inodes: 16382.0 Mi   Used Inodes: 5.3%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : benchmark
+access              : file-per-process
+type                : independent
+segments            : 1000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 16
+tasks               : 384
+clients per node    : 24
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 5
+xfersize            : 2 MiB
+blocksize           : 16 MiB
+aggregate filesize  : 5.86 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: task 272, partial write(), 978944 of 2097152 bytes at offset 11626610688
+
+WARNING: task 374, partial write(), 1126400 of 2097152 bytes at offset 13440647168
+
+WARNING: task 295, partial write(), 1351680 of 2097152 bytes at offset 12192841728
+
+WARNING: task 261, partial write(), 1146880 of 2097152 bytes at offset 14512291840
+
+WARNING: task 339, partial write(), 4096 of 2097152 bytes at offset 11542724608
+
+WARNING: task 320, partial write(), 1499136 of 2097152 bytes at offset 13209960448
+
+WARNING: task 271, partial write(), 1568768 of 2097152 bytes at offset 11595153408
+
+WARNING: task 278, partial write(), 1282048 of 2097152 bytes at offset 11469324288
+
+WARNING: task 267, partial write(), 1310720 of 2097152 bytes at offset 11519655936
+
+WARNING: task 283, partial write(), 1609728 of 2097152 bytes at offset 12278824960
+
+WARNING: task 255, partial write(), 970752 of 2097152 bytes at offset 13688111104
+
+WARNING: task 282, partial write(), 1519616 of 2097152 bytes at offset 9577693184
+
+WARNING: task 263, partial write(), 1474560 of 2097152 bytes at offset 11605639168
+
+WARNING: task 254, partial write(), 1576960 of 2097152 bytes at offset 10913579008
+
+WARNING: task 245, partial write(), 1585152 of 2097152 bytes at offset 9227468800
+
+WARNING: task 246, partial write(), 4096 of 2097152 bytes at offset 11137974272
+
+WARNING: write(15, 0x15032684d000, 520192) failed Disk quota exceeded
+WARNING: task 254, partial write(), -1 of 520192 bytes at offset 10915155968
+
+WARNING: task 253, partial write(), 1544192 of 2097152 bytes at offset 11131682816
+
+WARNING: task 248, partial write(), 1589248 of 2097152 bytes at offset 10921967616
+
+WARNING: write(15, 0x1549e9b9e000, 950272) failed Disk quota exceeded
+WARNING: task 261, partial write(), -1 of 950272 bytes at offset 14513438720
+
+WARNING: write(15, 0x151b3c1de000, 622592) failed Disk quota exceeded
+WARNING: task 263, partial write(), -1 of 622592 bytes at offset 11607113728
+
+WARNING: write(15, 0x150ceb02e000, 552960) failed Disk quota exceeded
+WARNING: task 253, partial write(), -1 of 552960 bytes at offset 11133227008
+
+WARNING: write(15, 0x151240046000, 507904) failed Disk quota exceeded
+WARNING: task 248, partial write(), -1 of 507904 bytes at offset 10923556864
+
+WARNING: task 249, partial write(), 1032192 of 2097152 bytes at offset 13545504768
+
+WARNING: task 257, partial write(), 4096 of 2097152 bytes at offset 13230931968
+
+WARNING: task 369, partial write(), 1122304 of 2097152 bytes at offset 13417578496
+
+WARNING: task 376, partial write(), 1544192 of 2097152 bytes at offset 12727615488
+
+WARNING: task 371, partial write(), 1966080 of 2097152 bytes at offset 15445524480
+
+WARNING: write(15, 0x14ecb4852000, 2097152) failed Disk quota exceeded
+WARNING: task 375, partial write(), -1 of 2097152 bytes at offset 10638852096
+
+WARNING: write(15, 0x1545d5935000, 552960) failed Disk quota exceeded
+WARNING: task 376, partial write(), -1 of 552960 bytes at offset 12729159680
+
+WARNING: task 367, partial write(), 757760 of 2097152 bytes at offset 10481565696
+
+WARNING: task 382, partial write(), 782336 of 2097152 bytes at offset 10886316032
+
+WARNING: task 380, partial write(), 765952 of 2097152 bytes at offset 10928259072
+
+WARNING: task 381, partial write(), 864256 of 2097152 bytes at offset 10890510336
+
+WARNING: task 268, partial write(), 1519616 of 2097152 bytes at offset 9420406784
+
+WARNING: task 303, partial write(), 1282048 of 2097152 bytes at offset 15550382080
+
+WARNING: task 288, partial write(), 487424 of 2097152 bytes at offset 10863247360
+
+WARNING: write(15, 0x14f85f211000, 2097152) failed Disk quota exceeded
+WARNING: task 293, partial write(), -1 of 2097152 bytes at offset 11905531904
+
+WARNING: task 299, partial write(), 1904640 of 2097152 bytes at offset 10508828672
+
+WARNING: task 307, partial write(), 1703936 of 2097152 bytes at offset 10959716352
+
+WARNING: write(15, 0x14f99de8d000, 2097152) failed Disk quota exceeded
+WARNING: task 310, partial write(), -1 of 2097152 bytes at offset 13654556672
+
+WARNING: task 305, partial write(), 991232 of 2097152 bytes at offset 10687086592
+
+WARNING: write(15, 0x14cc7aea0000, 393216) failed Disk quota exceeded
+WARNING: task 307, partial write(), -1 of 393216 bytes at offset 10961420288
+
+WARNING: task 309, partial write(), 843776 of 2097152 bytes at offset 11010048000
+
+WARNING: write(15, 0x14c597132000, 2097152) failed Disk quota exceeded
+WARNING: task 296, partial write(), -1 of 2097152 bytes at offset 10859053056
+
+WARNING: write(15, 0x155402b2c000, 745472) failed Disk quota exceeded
+WARNING: task 295, partial write(), -1 of 745472 bytes at offset 12194193408
+
+WARNING: task 290, partial write(), 516096 of 2097152 bytes at offset 10926161920
+
+WARNING: task 291, partial write(), 1228800 of 2097152 bytes at offset 10798235648
+
+WARNING: write(15, 0x150f582cf000, 2097152) failed Disk quota exceeded
+WARNING: task 366, partial write(), -1 of 2097152 bytes at offset 10127147008
+
+WARNING: task 264, partial write(), 679936 of 2097152 bytes at offset 9078571008
+
+WARNING: task 370, partial write(), 4096 of 2097152 bytes at offset 10492051456
+
+WARNING: task 265, partial write(), 1462272 of 2097152 bytes at offset 9391046656
+
+WARNING: task 266, partial write(), 1556480 of 2097152 bytes at offset 9470738432
+
+WARNING: write(15, 0x1520dc766000, 1118208) failed Disk quota exceeded
+WARNING: task 272, partial write(), -1 of 1118208 bytes at offset 11627589632
+
+WARNING: task 269, partial write(), 4096 of 2097152 bytes at offset 11450449920
+
+WARNING: write(15, 0x14d6d4149000, 2097152) failed Disk quota exceeded
+WARNING: task 344, partial write(), -1 of 2097152 bytes at offset 8722055168
+
+WARNING: task 345, partial write(), 4096 of 2097152 bytes at offset 11242831872
+
+WARNING: task 359, partial write(), 1642496 of 2097152 bytes at offset 15179186176
+
+WARNING: task 355, partial write(), 1785856 of 2097152 bytes at offset 12689866752
+
+WARNING: task 341, partial write(), 2084864 of 2097152 bytes at offset 14948499456
+
+WARNING: task 358, partial write(), 4096 of 2097152 bytes at offset 12794724352
+
+WARNING: task 346, partial write(), 200704 of 2097152 bytes at offset 11601444864
+
+WARNING: task 354, partial write(), 4096 of 2097152 bytes at offset 15428747264
+
+WARNING: write(15, 0x14d3d24a5000, 12288) failed Disk quota exceeded
+WARNING: task 341, partial write(), -1 of 12288 bytes at offset 14950584320
+
+WARNING: task 276, partial write(), 1523712 of 2097152 bytes at offset 10835984384
+
+WARNING: task 361, partial write(), 4096 of 2097152 bytes at offset 10557063168
+
+WARNING: task 284, partial write(), 1527808 of 2097152 bytes at offset 9640607744
+
+WARNING: write(15, 0x14c04bcad000, 528384) failed Disk quota exceeded
+WARNING: task 271, partial write(), -1 of 528384 bytes at offset 11596722176
+
+WARNING: task 372, partial write(), 4096 of 2097152 bytes at offset 10531897344
+
+WARNING: task 337, partial write(), 823296 of 2097152 bytes at offset 8705277952
+
+WARNING: task 306, partial write(), 561152 of 2097152 bytes at offset 13241417728
+
+WARNING: write(15, 0x14999f360000, 573440) failed Disk quota exceeded
+WARNING: task 276, partial write(), -1 of 573440 bytes at offset 10837508096
+
+WARNING: task 379, partial write(), 1695744 of 2097152 bytes at offset 16699621376
+
+WARNING: task 328, partial write(), 1355776 of 2097152 bytes at offset 12838764544
+
+WARNING: task 314, partial write(), 2064384 of 2097152 bytes at offset 13111394304
+
+WARNING: task 325, partial write(), 4096 of 2097152 bytes at offset 12956205056
+
+WARNING: task 318, partial write(), 897024 of 2097152 bytes at offset 8529117184
+
+WARNING: task 329, partial write(), 696320 of 2097152 bytes at offset 8420065280
+
+WARNING: task 316, partial write(), 790528 of 2097152 bytes at offset 8531214336
+
+WARNING: task 315, partial write(), 4096 of 2097152 bytes at offset 13170114560
+
+WARNING: task 332, partial write(), 1417216 of 2097152 bytes at offset 13111394304
+
+WARNING: task 319, partial write(), 847872 of 2097152 bytes at offset 8501854208
+
+WARNING: task 317, partial write(), 1351680 of 2097152 bytes at offset 12559843328
+
+WARNING: task 323, partial write(), 4096 of 2097152 bytes at offset 12696158208
+
+WARNING: write(15, 0x14cda7b9a000, 598016) failed Disk quota exceeded
+WARNING: task 320, partial write(), -1 of 598016 bytes at offset 13211459584
+
+WARNING: write(15, 0x151b04716000, 32768) failed Disk quota exceeded
+WARNING: task 314, partial write(), -1 of 32768 bytes at offset 13113458688
+
+WARNING: write(15, 0x149389307000, 745472) failed Disk quota exceeded
+WARNING: task 317, partial write(), -1 of 745472 bytes at offset 12561195008
+
+WARNING: write(15, 0x15279ff7a000, 577536) failed Disk quota exceeded
+WARNING: task 282, partial write(), -1 of 577536 bytes at offset 9579212800
+
+WARNING: write(15, 0x1463f95b9000, 2093056) failed Disk quota exceeded
+WARNING: task 339, partial write(), -1 of 2093056 bytes at offset 11542728704
+
+WARNING: write(15, 0x1524df5bd000, 974848) failed Disk quota exceeded
+WARNING: task 369, partial write(), -1 of 974848 bytes at offset 13418700800
+
+WARNING: task 336, partial write(), 1040384 of 2097152 bytes at offset 14738784256
+
+WARNING: task 298, partial write(), 4096 of 2097152 bytes at offset 15871246336
+
+WARNING: task 347, partial write(), 1286144 of 2097152 bytes at offset 14768144384
+
+WARNING: task 368, partial write(), 4096 of 2097152 bytes at offset 13319012352
+
+WARNING: task 348, partial write(), 4096 of 2097152 bytes at offset 8568963072
+
+WARNING: task 275, partial write(), 954368 of 2097152 bytes at offset 10798235648
+
+WARNING: write(15, 0x151a04e1d000, 1200128) failed Disk quota exceeded
+WARNING: task 318, partial write(), -1 of 1200128 bytes at offset 8530014208
+
+WARNING: write(15, 0x15112b685000, 569344) failed Disk quota exceeded
+WARNING: task 284, partial write(), -1 of 569344 bytes at offset 9642135552
+
+WARNING: task 285, partial write(), 4096 of 2097152 bytes at offset 12413042688
+
+WARNING: task 311, partial write(), 98304 of 2097152 bytes at offset 13386121216
+
+WARNING: write(15, 0x14cadae47000, 1314816) failed Disk quota exceeded
+WARNING: task 382, partial write(), -1 of 1314816 bytes at offset 10887098368
+
+WARNING: write(15, 0x153061959000, 454656) failed Disk quota exceeded
+WARNING: task 359, partial write(), -1 of 454656 bytes at offset 15180828672
+
+WARNING: write(15, 0x14824d7f5000, 1331200) failed Disk quota exceeded
+WARNING: task 380, partial write(), -1 of 1331200 bytes at offset 10929025024
+
+WARNING: task 273, partial write(), 4096 of 2097152 bytes at offset 11096031232
+
+WARNING: write(15, 0x149f7d60e000, 815104) failed Disk quota exceeded
+WARNING: task 278, partial write(), -1 of 815104 bytes at offset 11470606336
+
+WARNING: task 362, partial write(), 1978368 of 2097152 bytes at offset 10276044800
+
+WARNING: write(15, 0x14d1f3fde000, 815104) failed Disk quota exceeded
+WARNING: task 303, partial write(), -1 of 815104 bytes at offset 15551664128
+
+WARNING: task 377, partial write(), 4096 of 2097152 bytes at offset 12354322432
+
+WARNING: task 356, partial write(), 114688 of 2097152 bytes at offset 15252586496
+
+WARNING: write(15, 0x151f46ce6000, 1339392) failed Disk quota exceeded
+WARNING: task 367, partial write(), -1 of 1339392 bytes at offset 10482323456
+
+WARNING: task 294, partial write(), 1937408 of 2097152 bytes at offset 10391388160
+
+WARNING: write(15, 0x14a106078000, 311296) failed Disk quota exceeded
+WARNING: task 355, partial write(), -1 of 311296 bytes at offset 12691652608
+
+WARNING: task 373, partial write(), 4096 of 2097152 bytes at offset 10575937536
+
+WARNING: task 378, partial write(), 1785856 of 2097152 bytes at offset 16636706816
+
+WARNING: write(15, 0x14fb55fdf000, 786432) failed Disk quota exceeded
+WARNING: task 267, partial write(), -1 of 786432 bytes at offset 11520966656
+
+WARNING: task 301, partial write(), 1302528 of 2097152 bytes at offset 15762194432
+
+WARNING: task 297, partial write(), 839680 of 2097152 bytes at offset 10821304320
+
+WARNING: write(15, 0x149a6e2e1000, 487424) failed Disk quota exceeded
+WARNING: task 283, partial write(), -1 of 487424 bytes at offset 12280434688
+
+WARNING: task 308, partial write(), 1507328 of 2097152 bytes at offset 16412311552
+
+WARNING: task 383, partial write(), 4096 of 2097152 bytes at offset 10773069824
+
+WARNING: task 360, partial write(), 925696 of 2097152 bytes at offset 15711862784
+
+WARNING: write(15, 0x1553e659a000, 1249280) failed Disk quota exceeded
+WARNING: task 319, partial write(), -1 of 1249280 bytes at offset 8502702080
+
+WARNING: task 260, partial write(), 827392 of 2097152 bytes at offset 10655629312
+
+WARNING: task 242, partial write(), 1654784 of 2097152 bytes at offset 9743368192
+
+WARNING: task 241, partial write(), 1630208 of 2097152 bytes at offset 9422503936
+
+WARNING: task 259, partial write(), 4096 of 2097152 bytes at offset 11647582208
+
+WARNING: write(15, 0x14ac79f05000, 512000) failed Disk quota exceeded
+WARNING: task 245, partial write(), -1 of 512000 bytes at offset 9229053952
+
+WARNING: write(15, 0x149743be0000, 2093056) failed Disk quota exceeded
+WARNING: task 246, partial write(), -1 of 2093056 bytes at offset 11137978368
+
+WARNING: write(15, 0x152b503e4000, 2093056) failed Disk quota exceeded
+WARNING: task 257, partial write(), -1 of 2093056 bytes at offset 13230936064
+
+WARNING: write(15, 0x1553dbe2f000, 466944) failed Disk quota exceeded
+WARNING: task 241, partial write(), -1 of 466944 bytes at offset 9424134144
+
+WARNING: write(15, 0x14b2a87bb000, 442368) failed Disk quota exceeded
+WARNING: task 242, partial write(), -1 of 442368 bytes at offset 9745022976
+
+WARNING: task 244, partial write(), 966656 of 2097152 bytes at offset 13832814592
+
+WARNING: write(15, 0x14825e802000, 1064960) failed Disk quota exceeded
+WARNING: task 249, partial write(), -1 of 1064960 bytes at offset 13546536960
+
+WARNING: task 256, partial write(), 1654784 of 2097152 bytes at offset 9252634624
+
+WARNING: task 292, partial write(), 1900544 of 2097152 bytes at offset 10729029632
+
+WARNING: write(15, 0x153814251000, 1126400) failed Disk quota exceeded
+WARNING: task 255, partial write(), -1 of 1126400 bytes at offset 13689081856
+
+WARNING: write(15, 0x146348453000, 159744) failed Disk quota exceeded
+WARNING: task 294, partial write(), -1 of 159744 bytes at offset 10393325568
+
+WARNING: write(15, 0x151d34cd2000, 577536) failed Disk quota exceeded
+WARNING: task 268, partial write(), -1 of 577536 bytes at offset 9421926400
+
+WARNING: task 262, partial write(), 819200 of 2097152 bytes at offset 10622074880
+
+WARNING: write(15, 0x14e7828bb000, 2093056) failed Disk quota exceeded
+WARNING: task 372, partial write(), -1 of 2093056 bytes at offset 10531901440
+
+WARNING: task 250, partial write(), 1744896 of 2097152 bytes at offset 9424601088
+
+WARNING: write(15, 0x152f13376000, 2097152) failed Disk quota exceeded
+WARNING: task 353, partial write(), -1 of 2097152 bytes at offset 14893973504
+
+WARNING: write(15, 0x14ccb691e000, 970752) failed Disk quota exceeded
+WARNING: task 374, partial write(), -1 of 970752 bytes at offset 13441773568
+
+WARNING: write(15, 0x151e5c25a000, 131072) failed Disk quota exceeded
+WARNING: task 371, partial write(), -1 of 131072 bytes at offset 15447490560
+
+WARNING: task 304, partial write(), 4096 of 2097152 bytes at offset 10240393216
+
+WARNING: write(15, 0x14db7931b000, 1105920) failed Disk quota exceeded
+WARNING: task 305, partial write(), -1 of 1105920 bytes at offset 10688077824
+
+WARNING: task 343, partial write(), 819200 of 2097152 bytes at offset 8470396928
+
+WARNING: write(15, 0x14c323d2a000, 634880) failed Disk quota exceeded
+WARNING: task 265, partial write(), -1 of 634880 bytes at offset 9392508928
+
+WARNING: task 340, partial write(), 4096 of 2097152 bytes at offset 15040774144
+
+WARNING: write(16, 0x14dec615a000, 1609728) failed Disk quota exceeded
+WARNING: task 288, partial write(), -1 of 1609728 bytes at offset 10863734784
+
+WARNING: write(15, 0x15001bf8b000, 794624) failed Disk quota exceeded
+WARNING: task 301, partial write(), -1 of 794624 bytes at offset 15763496960
+
+WARNING: task 351, partial write(), 827392 of 2097152 bytes at offset 8917090304
+
+WARNING: write(15, 0x14a888ec2000, 192512) failed Disk quota exceeded
+WARNING: task 299, partial write(), -1 of 192512 bytes at offset 10510733312
+
+WARNING: task 350, partial write(), 802816 of 2097152 bytes at offset 8877244416
+
+WARNING: write(15, 0x1454d9450000, 1253376) failed Disk quota exceeded
+WARNING: task 309, partial write(), -1 of 1253376 bytes at offset 11010891776
+
+WARNING: write(15, 0x150c70219000, 1130496) failed Disk quota exceeded
+WARNING: task 244, partial write(), -1 of 1130496 bytes at offset 13833781248
+
+WARNING: write(15, 0x154af201a000, 2093056) failed Disk quota exceeded
+WARNING: task 345, partial write(), -1 of 2093056 bytes at offset 11242835968
+
+WARNING: task 352, partial write(), 798720 of 2097152 bytes at offset 8600420352
+
+WARNING: write(16, 0x1458002d9000, 1417216) failed Disk quota exceeded
+WARNING: task 264, partial write(), -1 of 1417216 bytes at offset 9079250944
+
+WARNING: write(15, 0x14d33f412000, 2093056) failed Disk quota exceeded
+WARNING: task 354, partial write(), -1 of 2093056 bytes at offset 15428751360
+
+WARNING: write(15, 0x14a90d3cb000, 1896448) failed Disk quota exceeded
+WARNING: task 346, partial write(), -1 of 1896448 bytes at offset 11601645568
+
+WARNING: write(15, 0x14e716dcf000, 540672) failed Disk quota exceeded
+WARNING: task 266, partial write(), -1 of 540672 bytes at offset 9472294912
+
+WARNING: write(15, 0x152d7a393000, 2093056) failed Disk quota exceeded
+WARNING: task 259, partial write(), -1 of 2093056 bytes at offset 11647586304
+
+WARNING: write(15, 0x15028a8b1000, 1232896) failed Disk quota exceeded
+WARNING: task 381, partial write(), -1 of 1232896 bytes at offset 10891374592
+
+WARNING: write(15, 0x14fd70f11000, 401408) failed Disk quota exceeded
+WARNING: task 379, partial write(), -1 of 401408 bytes at offset 16701317120
+
+WARNING: write(15, 0x14d5f894b000, 1269760) failed Disk quota exceeded
+WARNING: task 260, partial write(), -1 of 1269760 bytes at offset 10656456704
+
+WARNING: write(15, 0x14e1fd420000, 2093056) failed Disk quota exceeded
+WARNING: task 269, partial write(), -1 of 2093056 bytes at offset 11450454016
+
+WARNING: write(15, 0x14bb26a3d000, 118784) failed Disk quota exceeded
+WARNING: task 362, partial write(), -1 of 118784 bytes at offset 10278023168
+
+WARNING: write(15, 0x154d6a7be000, 2093056) failed Disk quota exceeded
+WARNING: task 358, partial write(), -1 of 2093056 bytes at offset 12794728448
+
+WARNING: write(15, 0x14c152559000, 2093056) failed Disk quota exceeded
+WARNING: task 285, partial write(), -1 of 2093056 bytes at offset 12413046784
+
+WARNING: write(15, 0x14de8d544000, 1581056) failed Disk quota exceeded
+WARNING: task 290, partial write(), -1 of 1581056 bytes at offset 10926678016
+
+WARNING: write(15, 0x14dd91a19000, 311296) failed Disk quota exceeded
+WARNING: task 378, partial write(), -1 of 311296 bytes at offset 16638492672
+
+WARNING: write(15, 0x14571d1a6000, 868352) failed Disk quota exceeded
+WARNING: task 291, partial write(), -1 of 868352 bytes at offset 10799464448
+
+WARNING: write(15, 0x145790ea7000, 1273856) failed Disk quota exceeded
+WARNING: task 337, partial write(), -1 of 1273856 bytes at offset 8706101248
+
+WARNING: write(15, 0x148c1660a000, 1142784) failed Disk quota exceeded
+WARNING: task 275, partial write(), -1 of 1142784 bytes at offset 10799190016
+
+WARNING: write(15, 0x145d753f7000, 2093056) failed Disk quota exceeded
+WARNING: task 361, partial write(), -1 of 2093056 bytes at offset 10557067264
+
+WARNING: write(15, 0x153a91d07000, 2093056) failed Disk quota exceeded
+WARNING: task 370, partial write(), -1 of 2093056 bytes at offset 10492055552
+
+WARNING: write(15, 0x1540765dd000, 811008) failed Disk quota exceeded
+WARNING: task 347, partial write(), -1 of 811008 bytes at offset 14769430528
+
+WARNING: write(15, 0x14e0fa846000, 2093056) failed Disk quota exceeded
+WARNING: task 273, partial write(), -1 of 2093056 bytes at offset 11096035328
+
+WARNING: write(15, 0x146d4cbd1000, 1277952) failed Disk quota exceeded
+WARNING: task 262, partial write(), -1 of 1277952 bytes at offset 10622894080
+
+WARNING: write(15, 0x14e9f4ae5000, 2093056) failed Disk quota exceeded
+WARNING: task 348, partial write(), -1 of 2093056 bytes at offset 8568967168
+
+WARNING: write(15, 0x14910e7b4000, 2093056) failed Disk quota exceeded
+WARNING: task 368, partial write(), -1 of 2093056 bytes at offset 13319016448
+
+WARNING: write(15, 0x14933532c000, 2093056) failed Disk quota exceeded
+WARNING: task 383, partial write(), -1 of 2093056 bytes at offset 10773073920
+
+WARNING: write(15, 0x14b54a753000, 442368) failed Disk quota exceeded
+WARNING: task 256, partial write(), -1 of 442368 bytes at offset 9254289408
+
+WARNING: write(15, 0x1463d1ffe000, 2093056) failed Disk quota exceeded
+WARNING: task 298, partial write(), -1 of 2093056 bytes at offset 15871250432
+
+WARNING: write(15, 0x14886a698000, 1536000) failed Disk quota exceeded
+WARNING: task 306, partial write(), -1 of 1536000 bytes at offset 13241978880
+
+WARNING: write(15, 0x147234143000, 589824) failed Disk quota exceeded
+WARNING: task 308, partial write(), -1 of 589824 bytes at offset 16413818880
+
+WARNING: write(15, 0x1509d8b93000, 2093056) failed Disk quota exceeded
+WARNING: task 377, partial write(), -1 of 2093056 bytes at offset 12354326528
+
+WARNING: write(16, 0x1468ed7a7000, 1056768) failed Disk quota exceeded
+WARNING: task 336, partial write(), -1 of 1056768 bytes at offset 14739824640
+
+WARNING: write(15, 0x14d920b0e000, 352256) failed Disk quota exceeded
+WARNING: task 250, partial write(), -1 of 352256 bytes at offset 9426345984
+
+WARNING: write(15, 0x153f53c03000, 196608) failed Disk quota exceeded
+WARNING: task 292, partial write(), -1 of 196608 bytes at offset 10730930176
+
+WARNING: write(15, 0x14a511846000, 1998848) failed Disk quota exceeded
+WARNING: task 311, partial write(), -1 of 1998848 bytes at offset 13386219520
+
+WARNING: task 331, partial write(), 4096 of 2097152 bytes at offset 13216251904
+
+WARNING: write(15, 0x15363ffbf000, 2093056) failed Disk quota exceeded
+WARNING: task 340, partial write(), -1 of 2093056 bytes at offset 15040778240
+
+WARNING: write(15, 0x14b0314d9000, 1257472) failed Disk quota exceeded
+WARNING: task 297, partial write(), -1 of 1257472 bytes at offset 10822144000
+
+WARNING: write(16, 0x15355e6e5000, 1171456) failed Disk quota exceeded
+WARNING: task 360, partial write(), -1 of 1171456 bytes at offset 15712788480
+
+WARNING: write(15, 0x154a3cf9d000, 2093056) failed Disk quota exceeded
+WARNING: task 373, partial write(), -1 of 2093056 bytes at offset 10575941632
+
+WARNING: write(15, 0x14e18bfbf000, 1982464) failed Disk quota exceeded
+WARNING: task 356, partial write(), -1 of 1982464 bytes at offset 15252701184
+
+WARNING: task 322, partial write(), 4096 of 2097152 bytes at offset 13048479744
+
+WARNING: write(15, 0x148a0898e000, 1269760) failed Disk quota exceeded
+WARNING: task 351, partial write(), -1 of 1269760 bytes at offset 8917917696
+
+WARNING: task 333, partial write(), 835584 of 2097152 bytes at offset 8585740288
+
+WARNING: task 330, partial write(), 4096 of 2097152 bytes at offset 8503951360
+
+WARNING: write(15, 0x14cf7a1ff000, 1277952) failed Disk quota exceeded
+WARNING: task 343, partial write(), -1 of 1277952 bytes at offset 8471216128
+
+WARNING: task 327, partial write(), 4096 of 2097152 bytes at offset 13180600320
+
+WARNING: task 334, partial write(), 4096 of 2097152 bytes at offset 13126074368
+
+WARNING: write(15, 0x15292f5b8000, 2093056) failed Disk quota exceeded
+WARNING: task 304, partial write(), -1 of 2093056 bytes at offset 10240397312
+
+WARNING: write(15, 0x1518bf986000, 1294336) failed Disk quota exceeded
+WARNING: task 350, partial write(), -1 of 1294336 bytes at offset 8878047232
+
+WARNING: write(15, 0x154bb4e35000, 1298432) failed Disk quota exceeded
+WARNING: task 352, partial write(), -1 of 1298432 bytes at offset 8601219072
+
+WARNING: write(15, 0x14e933a6f000, 741376) failed Disk quota exceeded
+WARNING: task 328, partial write(), -1 of 741376 bytes at offset 12840120320
+
+WARNING: write(15, 0x14dd0fbfc000, 2093056) failed Disk quota exceeded
+WARNING: task 325, partial write(), -1 of 2093056 bytes at offset 12956209152
+
+WARNING: write(15, 0x1496aa263000, 1306624) failed Disk quota exceeded
+WARNING: task 316, partial write(), -1 of 1306624 bytes at offset 8532004864
+
+WARNING: write(15, 0x14709ae5f000, 1400832) failed Disk quota exceeded
+WARNING: task 329, partial write(), -1 of 1400832 bytes at offset 8420761600
+
+WARNING: write(15, 0x1549d30cf000, 2093056) failed Disk quota exceeded
+WARNING: task 315, partial write(), -1 of 2093056 bytes at offset 13170118656
+
+WARNING: write(15, 0x1471a589e000, 679936) failed Disk quota exceeded
+WARNING: task 332, partial write(), -1 of 679936 bytes at offset 13112811520
+
+WARNING: write(15, 0x14c64a3b0000, 2093056) failed Disk quota exceeded
+WARNING: task 323, partial write(), -1 of 2093056 bytes at offset 12696162304
+
+WARNING: write(15, 0x14737e12f000, 2093056) failed Disk quota exceeded
+WARNING: task 322, partial write(), -1 of 2093056 bytes at offset 13048483840
+
+WARNING: write(15, 0x148f74dcc000, 1261568) failed Disk quota exceeded
+WARNING: task 333, partial write(), -1 of 1261568 bytes at offset 8586575872
+
+WARNING: write(15, 0x151277a12000, 2093056) failed Disk quota exceeded
+WARNING: task 330, partial write(), -1 of 2093056 bytes at offset 8503955456
+
+WARNING: write(15, 0x147f8f363000, 2093056) failed Disk quota exceeded
+WARNING: task 334, partial write(), -1 of 2093056 bytes at offset 13126078464
+
+WARNING: write(15, 0x1475cb417000, 2093056) failed Disk quota exceeded
+WARNING: task 327, partial write(), -1 of 2093056 bytes at offset 13180604416
+

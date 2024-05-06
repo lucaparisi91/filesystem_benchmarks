@@ -1,0 +1,67 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Apr  5 15:49:30 2024
+Command line        : /work/z04/z04/lparisi/e1000_benchmarking/sw/ior/bin/ior -b 16m -t 2m -s 1000 -e -i 5 -C -F -O testFile=benchmark
+Machine             : Linux r1i0n0
+TestID              : 0
+StartTime           : Fri Apr  5 15:49:30 2024
+WARNING: The file "benchmark.00000006" exists already and will be deleted
+WARNING: The file "benchmark.00000002" exists already and will be deleted
+WARNING: The file "benchmark.00000008" exists already and will be deleted
+WARNING: The file "benchmark.00000010" exists already and will be deleted
+WARNING: The file "benchmark.00000014" exists already and will be deleted
+WARNING: The file "benchmark.00000012" exists already and will be deleted
+WARNING: The file "benchmark.00000005" exists already and will be deleted
+WARNING: The file "benchmark.00000013" exists already and will be deleted
+WARNING: The file "benchmark.00000009" exists already and will be deleted
+WARNING: The file "benchmark.00000007" exists already and will be deleted
+WARNING: The file "benchmark.00000004" exists already and will be deleted
+WARNING: The file "benchmark.00000015" exists already and will be deleted
+WARNING: The file "benchmark.00000001" exists already and will be deleted
+WARNING: The file "benchmark.00000011" exists already and will be deleted
+WARNING: The file "benchmark.00000003" exists already and will be deleted
+Path                : benchmark.00000000
+FS                  : 19.5 TiB   Used FS: 89.4%   Inodes: 16382.0 Mi   Used Inodes: 5.3%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : benchmark
+access              : file-per-process
+type                : independent
+segments            : 1000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 16
+tasks               : 16
+clients per node    : 1
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 5
+xfersize            : 2 MiB
+blocksize           : 16 MiB
+aggregate filesize  : 250 GiB
+
+Results: 
+WARNING: The file "benchmark.00000000" exists already and will be deleted
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     8807       4404       2.19        16384      2048.00    0.001398   29.07      11.57      29.07      0   
+read      16077      8039       1.79        16384      2048.00    0.000606   15.92      3.90       15.92      0   
+write     8877       4439       2.18        16384      2048.00    0.000786   28.84      11.40      28.84      1   
+read      16072      8036       1.99        16384      2048.00    0.000621   15.93      5.14       15.93      1   
+write     8865       4433       2.17        16384      2048.00    0.000773   28.88      11.50      28.88      2   
+read      16086      8043       1.65        16384      2048.00    0.000613   15.91      3.32       15.91      2   
+write     8914       4457       2.18        16384      2048.00    0.000725   28.72      11.49      28.72      3   
+read      16442      8221       1.75        16384      2048.00    0.000604   15.57      3.63       15.57      3   
+write     8766       4383       2.18        16384      2048.00    0.000713   29.20      11.97      29.20      4   
+read      16222      8111       1.94        16384      2048.00    0.000610   15.78      4.99       15.78      4   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        8914.31    8766.32    8846.10      52.65    4457.16    4383.16    4423.05      26.32   28.94033         NA            NA     0     16   1    5   1     1        1         0    0   1000 16777216  2097152  256000.0 POSIX      0
+read        16442.20   16072.02   16179.72     142.56    8221.10    8036.01    8089.86      71.28   15.82350         NA            NA     0     16   1    5   1     1        1         0    0   1000 16777216  2097152  256000.0 POSIX      0
+Finished            : Fri Apr  5 15:53:28 2024
+stripes: 1

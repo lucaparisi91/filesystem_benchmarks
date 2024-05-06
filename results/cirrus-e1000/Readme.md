@@ -38,3 +38,11 @@ Me made a simple metadata test creating empty files, each rank creating files in
 ## IO500 
 
 Results from io500 runs on a striped directory with 16 CPU nodes are summarized in a [csv file](io500/16N/io500_agg.txt)
+
+## Flash 
+
+We also tested the flash rpool using file per process benchmarks. We found a maximum bandwith of about 16GiB/s. With 4 nodes we observed performance to saturate at about 10 GiB/s vs 6GiB/s on the default rpool ( spinning disk). Maximum performance from the whole filesystem I have seen is 16 GiB/s. For comparison, the maximum performance on the spinning disk was about 12 GiB/s, but with fewer nodes ( hence the teo measurements are not directly comparable ).
+Raw data is in `cirrus-e1000/flash/reports` and summary data is in `cirrus-e1000/flash/fpp-write.dat` . 
+
+![File Per Process test](flash/fpp-write.png)
+* Results of file per process tests for different number of nodes and tasks per node on the solid state partition.*
